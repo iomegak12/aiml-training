@@ -1,0 +1,60 @@
+Great ... Observability with Metrics and Logs working ...
+
+Now, I have two requirements to accomplish ...
+
+a. Automated Tests
+b. Packaging Containers Images REST API, Prometheus and Grafana
+
+a. Automated Tests
+
+- tests with pytest
+- create tests\test_cleaning.py, tests\test_predict.py, tests\test_api.py
+- cleaning related tests
+	1. parse money cases
+	2. three date formatted cases
+	3. deduplicate keeps the last record
+	4. income above 2 crores is divided by 100
+	5. 5x annual income test cases
+- prediction related tests
+	1. offers are >= 0, <= 5x income and divisible by 1000 for all 10 sample rows
+	2. credit score 580 triggers manual review
+	3. missing income returns offered amount NONE
+- api related tests
+	1. /health check
+	2. /ready check
+	3. /predict 200
+	4. /predict 422
+	5. credit score 950
+	6. batch of 3
+	7. /metrics contains important metric values
+
+my acceptance would be 
+	- pytest
+	- show summary
+	- make sure that this test gets executed within 30 seconds
+
+b. Packaging Docker Container Images
+
+1. Dockerfile with multi-stage build
+2. docker compose includes Prometheus and Grafana
+3. avoid health checks inside docker file
+4. avoid version details in docker compose
+5. add volume support to containers that need. for example, instead of storing loads inside the container, attach a volume to the container 
+6. docker ignore
+7. models are added into the container (not through volume)
+8. add 0.1.0 tag and latest
+9. prefix images with iomega
+
+acceptance would be
+
+- docker build
+- docker images
+- docker run api container
+- docker logs
+- docker inspect
+- docker rm
+
+do you understand my change requirements related to testing and packaging? let's have a quick debate ourselves MCQs based QAs instead of paragraphic style, so we both are aligned.
+
+
+

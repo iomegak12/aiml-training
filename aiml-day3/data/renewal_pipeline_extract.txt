@@ -1,0 +1,124 @@
+# Corvana Networks CRM export | renewal pipeline | generated 2026-09-30
+subscription_id|account_name|region|product|tier|seats|acv_usd|renewal_date|owner
+SUB-50308|Apex Cloud|Americas|Corvana Collaborate|Essentials|150|25406.84|2026-10-01|a.menon
+SUB-50588|Cedarline Power|Americas|Corvana Collaborate|Premier|2095|502018.61|2026-10-01|j.ortiz
+SUB-50346|Coastal Diagnostics|APJC|Corvana Collaborate|Essentials|60|10111.04|2026-10-01|k.tanaka
+SUB-51150|Banyan Clinics|EMEA|Corvana Collaborate|Essentials|450|68123.73|2026-10-01|l.fischer
+SUB-50329|Kestrel Stores|APJC|Corvana SecureEdge|Advantage|460|129367.12|2026-10-02|p.iyer
+SUB-51076|Rhine Motors|Americas|Corvana SecureEdge|Advantage|1060|256829.04|2026-10-02|r.dubois
+SUB-50388|Westbrook Grid|Americas|Corvana Observe|Essentials|145|47833.65|2026-10-02|s.okafor
+SUB-50311|Granite Diagnostics|Americas|Corvana Collaborate|Premier|2080|539707.52|2026-10-02|a.menon
+
+SUB-50151|Nimbus Stores|EMEA|Corvana SecureEdge|Essentials|165|34757.99|2026-10-03|j.ortiz
+SUB-50642|Bluefield Components|APJC|Corvana Collaborate|Advantage|20|4781.95|2026-10-04|k.tanaka
+SUB-50218|Saffron Systems|Americas|Corvana Observe|Essentials|2870|779102.01|2026-10-04|l.fischer
+SUB-50780|Summit Software|EMEA|Corvana NetOps Cloud|Essentials|125|34361.16|2026-10-04|p.iyer
+SUB-50954|Oakridge Schools|Americas|Corvana Collaborate|Premier|10460|TBD|2026-10-04|r.dubois
+SUB-51007|Orchid Medical Group|EMEA|Corvana Collaborate|Premier|460|123509.57|2026-10-04|s.okafor
+SUB-50290|Ironwood Power|EMEA|Corvana Observe|Essentials|215|65197.07|2026-10-05|a.menon
+SUB-50912|Alpine Power|EMEA|Corvana SecureEdge|Essentials|195|44228.53|2026-10-05|j.ortiz
+SUB-50293|Zenith Labs|Americas|Corvana Collaborate|Essentials|200|31081.83|2026-10-05|k.tanaka
+SUB-51100|Rhine University|Americas|Corvana Collaborate|Advantage|745|158499.04|2026-10-05|l.fischer
+SUB-50117|Coastal Securities|Americas|Corvana SecureEdge|Advantage|800|221919.06|2026-10-06|p.iyer
+SUB-50504|Harborview Grid|Americas|Corvana SecureEdge|Advantage|180
+SUB-50051|Oakridge Public Works|Americas|Corvana Collaborate|Advantage|3660|664931.57|2026-10-07|s.okafor
+SUB-50832|Tidewater Clinics|EMEA|Corvana Collaborate|Essentials|165|26827.34|2026-10-07|a.menon
+SUB-50582|Unity Power|APJC|Corvana SecureEdge|Advantage|15|4473.89|2026-10-07|j.ortiz
+SUB-50543|Monsoon Renewables|Americas|Corvana NetOps Cloud|Essentials|25|6794.08|2026-10-07|k.tanaka
+SUB-50948|Nimbus Cloud|EMEA|Corvana SecureEdge|Premier|795|298924.26|2026-10-08|l.fischer
+SUB-50159|Falcon Utilities|Americas|Corvana Observe|Advantage|255|107450.50|2026-10-08|p.iyer
+SUB-51032|Unity Health|Americas|Corvana SecureEdge|Essentials|25|5324.45|2026-10-10|r.dubois
+SUB-51059|Vantage Insurance|APJC|Corvana Observe|Advantage|2675|949327.11|2026-10-11|s.okafor
+SUB-51182|Northgate Power|Americas|Corvana NetOps Cloud|Premier|-40|4595563.20|2026-10-11|a.menon
+SUB-51033|Unity Health|Americas|Corvana NetOps Cloud|Advantage|30|10422.89|2026-10-13|j.ortiz
+SUB-50520|Granite Cloud|Americas|Corvana NetOps Cloud|Essentials|800|205096.01|2026-10-13|k.tanaka
+SUB-50084|Evergreen Steelworks|EMEA|Corvana Observe|Advantage|580|246817.32|2026-10-13|l.fischer
+SUB-51183|Northgate Power|Americas|Corvana Observe|Advantage|1320|498054.53|2026-10-13|p.iyer
+SUB-51130|Quarry Digital|EMEA|Corvana Observe|Advantage|30|13673.64|2026-10-14|r.dubois
+SUB-50764|Lotus Energy|EMEA|Corvana Collaborate|Essentials|95|15983.55|2026-10-14|s.okafor
+SUB-51010|Sahyadri Insurance|EMEA|Corvana NetOps Cloud|Advantage|240|84482.17|2026-10-14|a.menon
+SUB-50262|Silverline Finance|EMEA|Corvana NetOps Cloud|Essentials|25|7005.08|2026-10-14|j.ortiz
+SUB-50203|Vantage University|Americas|Corvana SecureEdge|Essentials|1425|242378.91|2026-10-15|k.tanaka
+SUB-50422|Nimbus Power|Americas|Corvana SecureEdge|Essentials|15|3310.85|2026-10-15|l.fischer
+SUB-50978|Harborview Software|EMEA|Corvana SecureEdge|Premier|2135|664511.44|2026-10-15|p.iyer
+SUB-50278|Bluefield Diagnostics|Americas|Corvana Collaborate|Essentials|235|37601.04|2026-10-15|r.dubois
+SUB-50708|Evergreen Software|EMEA|Corvana SecureEdge|Essentials|55|12283.63|2026-10-17|s.okafor
+SUB-50816|Alpine Retail|Americas|Corvana SecureEdge|Advantage|4820|1286738.82|2026-10-18|a.menon
+SUB-50170|Oakridge Stores|EMEA|Corvana SecureEdge|Essentials|80|16860.91|2026-10-19|j.ortiz
+SUB-50721|Nimbus Utilities|EMEA|Corvana Observe|Essentials|9890|2537769.05|31/12/2026|k.tanaka
+SUB-50317|Quarry Bank|Americas|Corvana SecureEdge|Premier|665|234533.77|2026-10-20|l.fischer
+SUB-51205|Rhine Grid|APJC|Corvana NetOps Cloud|Essentials|250|66426.79|2026-10-20|p.iyer
+SUB-50257|Westbrook Institute|Americas|Corvana NetOps Cloud|Advantage|215|71783.53|2026-10-20|r.dubois
+SUB-51134|Apex Insurance|EMEA|Corvana SecureEdge|Premier|90|35051.08|2026-10-20|s.okafor
+SUB-50710|Brightpath Grid|EMEA|Corvana Collaborate|Advantage|9450|1816487.26|2026-10-21|a.menon
+SUB-51168|Nimbus Bank|EMEA|Corvana SecureEdge|Essentials|30|6539.07|2026-10-21|j.ortiz
+SUB-50718|Rhine Steelworks|APJC|Corvana SecureEdge|Advantage|1040|285530.01|2026-10-21|k.tanaka
+SUB-51056|Tidewater Mart|APJC|Corvana Collaborate|Advantage|40|8925.48|2026-10-21|l.fischer
+SUB-50148|Rhine Clinics|Americas|Corvana SecureEdge|Advantage|20|5960.03|2026-10-22|p.iyer
+SUB-50014|Lakeshore Power|APJC|Corvana Collaborate|Premier|320|92406.42|2026-10-22|r.dubois
+SUB-50135|Saffron Academy|Americas|Corvana NetOps Cloud|Essentials|300|75917.51|2026-10-23|s.okafor
+SUB-50285|Apex Retail|EMEA|Corvana SecureEdge|Essentials|3810|661741.57|2026-10-23|a.menon
+# --- page 2 ---
+SUB-50933|Bluefield Stores|EMEA|Corvana NetOps Cloud|Essentials|610|162718.48|2026-10-23|j.ortiz
+SUB-50935|Alpine Finance|Americas|Corvana NetOps Cloud|Premier|4375|1781215.91|2026-10-24|k.tanaka
+SUB-50839|Coastal Retail|EMEA|Corvana Collaborate|Essentials|155|24909.70|2026-10-25|l.fischer
+SUB-50555|Westbrook Bank|EMEA|Corvana NetOps Cloud|Essentials|260|68522.17|2026-10-25|p.iyer
+SUB-50949|Lakeshore Medical Group|EMEA|Corvana Collaborate|Premier|255|63744.63|2026-10-27|r.dubois
+SUB-50042|Meridian Renewables|EMEA|Corvana Observe|Essentials|35|12018.25|2026-10-27|s.okafor
+SUB-50728|Kestrel Hospitals|EMEA|Corvana Collaborate|Premier|1235|303452.64|2026-10-27|a.menon
+SUB-50320|Nimbus Medical Group|EMEA|Corvana SecureEdge|Advantage|275|77783.52|2026-10-28|j.ortiz
+SUB-50535|Redstone Stores|Americas|Corvana Collaborate|Advantage|530|117299.51|2026-10-29|k.tanaka
+SUB-51179|Apex Bank|Americas|Corvana SecureEdge|Essentials|35|7539.17|2026-10-29|l.fischer
+SUB-50472|Vantage Medical Group|APJC|Corvana NetOps Cloud|Advantage|25|9350.02|2026-10-30|p.iyer
+SUB-50236|Harborview Systems|Americas|Corvana SecureEdge|Advantage|2805|697332.88|2026-10-30|r.dubois
+SUB-50972|Unity Renewables|Americas|Corvana Observe|Advantage|820|339864.36|2026-10-30|s.okafor
+SUB-50934|Alpine Finance|Americas|Corvana Collaborate|Advantage|1675|307782.90|2026-10-31|a.menon
+SUB-50578|Rhine College|EMEA|Corvana SecureEdge|Essentials|2845|534362,64|2026-10-31|j.ortiz
+SUB-50489|Silverline Bank|APJC|Corvana SecureEdge|Advantage|95|27101.49|2026-10-31|k.tanaka
+SUB-50676|Coastal Industries|Americas|Corvana Collaborate|Essentials|870|110849.70|2026-10-31|l.fischer
+SUB-50124|Lakeshore Grid|EMEA|Corvana Collaborate|Advantage|70|15029.88|2026-10-31|p.iyer
+SUB-50961|Rhine Systems|EMEA|Corvana SecureEdge|Advantage|3500|833615.17|2026-11-01|r.dubois
+SUB-50302|Brightpath Clinics|Americas|Corvana Collaborate|Essentials|45|7779.30|2026-11-01|s.okafor
+SUB-50002|Summit Academy|APJC|Corvana NetOps Cloud|Advantage|815|266599.54|2026-11-01|a.menon
+SUB-50145|Pinnacle Academy|Americas|Corvana Collaborate|Premier|105|29618.06|2026-11-01|j.ortiz
+SUB-50992|Northgate Steelworks|Americas|Corvana Observe|Essentials|20|6342.26|2026-11-02|k.tanaka
+SUB-50746|Alpine Energy|Americas|Corvana SecureEdge|Essentials|445|94250.89|2026-11-02|l.fischer
+SUB-50511|Monsoon Power|EMEA|Corvana SecureEdge|Premier|4900|1610064.67|2026-11-04|p.iyer
+SUB-50402|Cedarline Stores|APJC|Corvana SecureEdge|Essentials|35|7592.12|2026-11-04|r.dubois
+SUB-50863|Saffron Outfitters|Americas|Corvana NetOps Cloud|Advantage|1245|397807.91|2026-11-04|s.okafor
+SUB-50352|Kaveri Hospitals|EMEA|Corvana Collaborate|Advantage|460|86396.97|2026-11-04|a.menon
+SUB-50681|Ironwood Fabrication|APJC|Corvana SecureEdge|Essentials|50|10910.06|2026-11-06|j.ortiz
+SUB-50684|Kestrel Retail|EMEA|Corvana Collaborate|Essentials|185|31544.91|2026-11-06|k.tanaka
+SUB-51053|Alpine Renewables|Americas|Corvana Collaborate|Advantage|615|119785.81|2026-11-07|l.fischer
+SUB-51014|Cedarline Clinics|Americas|Corvana Collaborate|Essentials|15|2425.66|2026-11-07|p.iyer
+SUB-51006|Summit Bank|APJC|Corvana Observe|Essentials|270|87314.92|2026-11-07|r.dubois
+SUB-50177|Kaveri College|EMEA|Corvana NetOps Cloud|Premier|2620|1080116.20|2026-11-08|s.okafor
+SUB-50775|Bluefield Steelworks|APJC|Corvana Observe|Essentials|1420|397826.56|2026-11-08|a.menon
+SUB-50026|Quarry Capital|APJC|Corvana SecureEdge|Premier|2610|863138.63|2026-11-08|j.ortiz
+SUB-51029|Orchid Transit Authority|Americas|Corvana NetOps Cloud|Premier|1635|722462.37|2026-11-08|k.tanaka
+SUB-50442|Brightpath Motors|Americas|Corvana SecureEdge|Advantage|415|112122.00|2026-11-10|l.fischer
+SUB-50923|Summit Mart|EMEA|Corvana SecureEdge|Advantage|4930|1214241.53|2026-11-10|p.iyer
+SUB-50560|Kestrel Digital|APJC|Corvana Collaborate|Essentials|190|29052.76|2026-11-10|r.dubois
+SUB-50545|Thames Hospitals|Americas|Corvana NetOps Cloud|Advantage|905|300113.15|2026-11-11|s.okafor
+SUB-50396|Evergreen Retail|Americas|Corvana SecureEdge|Premier|1565|533384.37|2026-11-11|a.menon
+SUB-50474|Cedarline Capital|EMEA|Corvana SecureEdge|Essentials|60|14308.01|2026-11-11|j.ortiz
+SUB-51003|Banyan Schools|APJC|Corvana NetOps Cloud|Essentials|1980|476567.16|2026-11-13|k.tanaka
+SUB-50883|Westbrook Schools|APJC|Corvana SecureEdge|Advantage|100|29266.87|2026-11-13|l.fischer
+SUB-50738|Lakeshore Clinics|Americas|Corvana Observe|Advantage|1355|520680.36|2026-11-14|p.iyer
+SUB-50415|Rhine Components|APJC|Corvana SecureEdge|Essentials|15|3340.58|2026-11-14|r.dubois
+SUB-51045|Tidewater Hospitals|APJC|Corvana SecureEdge|Essentials|165|36928.69|2026-11-15|s.okafor
+SUB-50015|Lakeshore Power|APJC|Corvana SecureEdge|Premier|145|47914.57|2026-11-15|a.menon
+SUB-51120|Alpine College|EMEA|Corvana SecureEdge|Essentials|4605|849424.83|2026-11-16|j.ortiz
+SUB-50379|Lotus University|APJC|Corvana SecureEdge|Advantage|3820|1014544.50|2026-11-16|k.tanaka
+SUB-50928|Coastal College|Americas|Corvana Observe|Essentials|30|10587.68|2026-11-16|l.fischer
+SUB-50697|Falcon Retail|Americas|Corvana Collaborate|Essentials|160|25600.67|2026-11-17|p.iyer
+SUB-50183|Alpine Components|Americas|Corvana NetOps Cloud|Essentials|15|4462.63|2026-11-17|r.dubois
+SUB-50936|Quarry Mart|Americas|Corvana Collaborate|Essentials|125|20936.18|2026-11-18|s.okafor
+SUB-50857|Nimbus Securities|APJC|Corvana SecureEdge|Advantage|3045|693079.30|2026-11-18|a.menon
+SUB-50527|Meridian Institute|Americas|Corvana Collaborate|Advantage|55|12330.45|2026-11-18|j.ortiz
+SUB-50672|Brightpath Stores|Americas|Corvana Collaborate|Advantage|2690|479213.00|2026-11-18|k.tanaka
+SUB-50784|Coastal Fabrication|EMEA|Corvana Collaborate|Essentials|465|71356.96|2026-11-20|l.fischer
+SUB-51047|Falcon Software|Americas|Corvana Collaborate|Essentials|135|21491.58|2026-11-21|p.iyer
+SUB-50666|Harborview Clinics|Americas|Corvana SecureEdge|Essentials|85|18039.63|2026-11-21|r.dubois
+SUB-50424|Alpine Public Works|Americas|Corvana Collaborate|Essentials|1010|155533.42|2026-11-22|s.okafor
+SUB-50730|Meridian Fabrication|Americas|Corvana Collaborate|Advantage|290|60839.34|2026-11-22|a.menon

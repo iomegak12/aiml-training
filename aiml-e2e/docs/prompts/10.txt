@@ -1,0 +1,46 @@
+Now, i would like to add logging, metrics and observability features to the REST API.
+
+Step 9: Observability
+
+create src\northwind_loans\api\observability.py and wire it into main.py
+
+following the given guidelines
+
+- structured JSON logging using python json logger library for the app and uvicorn access logs
+- each request log line includes - timestamp, level, message, request id, method, path, status code, duration milliseconds and model version 
+- at the middleware - read x-request-id header or generate a UUID4 - return it in the response header - time each request
+- since i'm using Prometheus for metrics, i would like to have the following metrics generated and collected
+
+   - loan_api_requests_total{method,endpoint,status_code}                Counter
+   - loan_api_request_duration_seconds{endpoint}                          Histogram,
+       buckets [0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1, 2.5]
+   - loan_api_requests_in_progress                                        Gauge
+   - loan_api_validation_errors_total{field}                              Counter (custom handler for
+       RequestValidationError that still returns FastAPI's normal 422 body)
+   - loan_model_predictions_total{loan_purpose,manual_review}             Counter
+   - loan_model_offer_amount_inr                                          Histogram,
+       buckets [100000, 250000, 500000, 1000000, 2500000, 5000000, 10000000, 25000000, 50000000]
+   - loan_model_offer_to_income_ratio                                     Histogram,
+       buckets [0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 5]
+   - loan_model_input_annual_income_inr                                   Histogram,
+       buckets [200000, 400000, 600000, 800000, 1000000, 1500000, 2000000, 3000000, 5000000, 10000000]
+   - loan_model_input_credit_score                                        Histogram,
+       buckets [550, 600, 650, 700, 750, 800, 850, 900]
+   - loan_model_reference_mean{feature}                                   Gauge, set once at start-up
+       from metadata for features annual_income, credit_score and predicted_offer
+   - loan_model_info{model_version,trained_at,sklearn_version}            Gauge set to 1
+
+- add get /metrics endpoint which returns Prometheus client generate latest with the current content type
+- predicting log - append one JSON line per prediction to log directory predictions.json with timestamp values
+	should include all the request / response details
+	- i would like to add PII to exclude age and gender
+- keep a single uvicorn worker (because my CPU is limited and Prometheus client also has some limitations)
+
+my acceptance test would be
+
+- send 20 valid /predict requests and 3 invalid ones
+- get /metrics endpoint print the lines
+- print the last 2 lines of log file that you have generated confirm age and gender are absent
+- show one JSON log line from the console
+
+do you understand my observability requirements? you can ask me questions if we need to align ourselves, in MCQs based QAs rather than prose style.

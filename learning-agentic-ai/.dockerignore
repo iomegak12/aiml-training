@@ -1,0 +1,25 @@
+# Keep the build context small and free of secrets
+.git
+.gitignore
+.venv
+.env
+.env.*
+!.env.example
+.pytest_cache
+**/__pycache__
+**/*.py[oc]
+data
+logs
+*.db
+notebooks
+tests
+Dockerfile
+docker-compose.yml
+.dockerignore
+*.md
+!README.md
+LICENSE
+Makefile
+
+# The web app has its own build context (web/)
+web

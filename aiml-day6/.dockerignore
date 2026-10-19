@@ -1,0 +1,8 @@
+# Whitelist build context: the MCP server image needs only the lock files and its own package.
+# Everything else (.env secrets, .venv, data/, PDFs, notebooks, docs, .git) never reaches the daemon.
+*
+!pyproject.toml
+!uv.lock
+!src/mcp_servers/
+**/__pycache__/
+**/*.py[oc]

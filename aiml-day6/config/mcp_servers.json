@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "crm_support": {
+      "transport": "http",
+      "url": "${CRM_MCP_URL}",
+      "description": "CRM & Support MCP server (customer profiles and support tickets). Start it with `make mcp-server-up`. No authentication - localhost only."
+    }
+  }
+}

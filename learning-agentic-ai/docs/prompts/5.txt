@@ -1,0 +1,24 @@
+<pasted_content id="6505">
+can you look into this attached screenshot of a website mockup ... having the reference, i want to develop a web application to demonstrate the back-end API features that we have built.
+
+- react web application
+- react-vite
+- add nginx backend to the web, so all calls are made via the nginx
+- javascript
+- modularize the code
+- you do NOT have to add unit testing / UI testing for now
+- port 80
+- update docker compose to add web also
+- docker file slimmed version
+- docker ignore
+- home, support and contact us pages
+- refer readme.md and prepare home contents
+- support page should render chat bot assistant
+- make sure that approval cases are handled professfionally
+- display plan
+- switch to streaming and non-streaming
+- no need to store conversation history in local storage permanently
+- after the user clicks send button, it should show a professionally animation to indicate that it's thinking, planning and some good vibe messages
+
+do you understand all my requirements related to the web application? Let's have a simple debate MCQs based QAs so we both are aligned.
+</pasted_content id="6505">

@@ -1,0 +1,225 @@
+{
+  "uid": "loan-api",
+  "title": "Northwind Loan Offer API",
+  "description": "Service health, model behaviour and data drift for the Northwind loan offer API. Educational demo on synthetic data - never use for real credit decisions.",
+  "tags": ["northwind", "loan-api", "mlops"],
+  "timezone": "browser",
+  "editable": true,
+  "graphTooltip": 1,
+  "refresh": "5s",
+  "time": {"from": "now-15m", "to": "now"},
+  "schemaVersion": 39,
+  "version": 1,
+  "templating": {"list": []},
+  "annotations": {"list": []},
+  "panels": [
+    {
+      "type": "row", "id": 100, "title": "Service health", "collapsed": false,
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 0}, "panels": []
+    },
+    {
+      "type": "timeseries", "id": 1, "title": "Requests per second by endpoint",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 8, "x": 0, "y": 1},
+      "fieldConfig": {"defaults": {"unit": "reqps", "custom": {"lineWidth": 2, "fillOpacity": 10}}, "overrides": []},
+      "options": {"legend": {"displayMode": "list", "placement": "bottom", "showLegend": true}, "tooltip": {"mode": "multi"}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "sum by (endpoint) (rate(loan_api_requests_total[1m]))", "legendFormat": "{{endpoint}}"}
+      ]
+    },
+    {
+      "type": "timeseries", "id": 2, "title": "Error rate % (4xx / 5xx)",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 8, "x": 8, "y": 1},
+      "fieldConfig": {"defaults": {"unit": "percent", "min": 0, "custom": {"lineWidth": 2, "fillOpacity": 10}}, "overrides": []},
+      "options": {"legend": {"displayMode": "list", "placement": "bottom", "showLegend": true}, "tooltip": {"mode": "multi"}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "100 * (sum(rate(loan_api_requests_total{status_code=~\"4..\"}[1m])) or vector(0)) / sum(rate(loan_api_requests_total[1m]))",
+         "legendFormat": "4xx %"},
+        {"refId": "B", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "100 * (sum(rate(loan_api_requests_total{status_code=~\"5..\"}[1m])) or vector(0)) / sum(rate(loan_api_requests_total[1m]))",
+         "legendFormat": "5xx %"}
+      ]
+    },
+    {
+      "type": "timeseries", "id": 3, "title": "Latency p50 / p95 - /predict",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 8, "x": 16, "y": 1},
+      "fieldConfig": {"defaults": {"unit": "s", "custom": {"lineWidth": 2, "fillOpacity": 10}}, "overrides": []},
+      "options": {"legend": {"displayMode": "list", "placement": "bottom", "showLegend": true}, "tooltip": {"mode": "multi"}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "histogram_quantile(0.5, sum by (le) (rate(loan_api_request_duration_seconds_bucket{endpoint=\"/predict\"}[1m])))",
+         "legendFormat": "p50"},
+        {"refId": "B", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "histogram_quantile(0.95, sum by (le) (rate(loan_api_request_duration_seconds_bucket{endpoint=\"/predict\"}[1m])))",
+         "legendFormat": "p95"}
+      ]
+    },
+    {
+      "type": "stat", "id": 4, "title": "In-flight requests",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 6, "w": 6, "x": 0, "y": 9},
+      "fieldConfig": {"defaults": {"unit": "none", "decimals": 0}, "overrides": []},
+      "options": {"reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false}, "colorMode": "value", "graphMode": "area", "textMode": "auto"},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "loan_api_requests_in_progress", "legendFormat": "in progress"}
+      ]
+    },
+    {
+      "type": "barchart", "id": 5, "title": "Validation errors by field (last 5m)",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 6, "w": 18, "x": 6, "y": 9},
+      "fieldConfig": {"defaults": {"unit": "none", "decimals": 0}, "overrides": []},
+      "options": {"xField": "field", "orientation": "horizontal", "showValue": "auto", "legend": {"showLegend": false}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "sum by (field) (increase(loan_api_validation_errors_total[5m]))",
+         "instant": true, "range": false, "format": "table", "legendFormat": "{{field}}"}
+      ]
+    },
+    {
+      "type": "row", "id": 200, "title": "Model behaviour", "collapsed": false,
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 15}, "panels": []
+    },
+    {
+      "type": "timeseries", "id": 6, "title": "Predictions per second by loan purpose",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 16},
+      "fieldConfig": {"defaults": {"unit": "ops", "custom": {"lineWidth": 2, "fillOpacity": 10}}, "overrides": []},
+      "options": {"legend": {"displayMode": "list", "placement": "bottom", "showLegend": true}, "tooltip": {"mode": "multi"}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "sum by (loan_purpose) (rate(loan_model_predictions_total[1m]))", "legendFormat": "{{loan_purpose}}"}
+      ]
+    },
+    {
+      "type": "timeseries", "id": 7, "title": "Average offer (live) vs training reference",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 16},
+      "fieldConfig": {
+        "defaults": {"unit": "currencyINR", "custom": {"lineWidth": 2, "fillOpacity": 0}},
+        "overrides": [
+          {"matcher": {"id": "byFrameRefID", "options": "B"},
+           "properties": [
+             {"id": "custom.lineStyle", "value": {"fill": "dash", "dash": [10, 10]}},
+             {"id": "color", "value": {"mode": "fixed", "fixedColor": "orange"}}
+           ]}
+        ]
+      },
+      "options": {"legend": {"displayMode": "list", "placement": "bottom", "showLegend": true}, "tooltip": {"mode": "multi"}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "sum(rate(loan_model_offer_amount_inr_sum[1m])) / sum(rate(loan_model_offer_amount_inr_count[1m]))",
+         "legendFormat": "live average offer"},
+        {"refId": "B", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "max(loan_model_reference_mean{feature=\"predicted_offer\"})",
+         "legendFormat": "training reference"}
+      ]
+    },
+    {
+      "type": "timeseries", "id": 8, "title": "Manual review share %",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 24},
+      "fieldConfig": {"defaults": {"unit": "percent", "min": 0, "custom": {"lineWidth": 2, "fillOpacity": 10}}, "overrides": []},
+      "options": {"legend": {"displayMode": "list", "placement": "bottom", "showLegend": true}, "tooltip": {"mode": "multi"}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "100 * (sum(rate(loan_model_predictions_total{manual_review=\"true\"}[2m])) or vector(0)) / sum(rate(loan_model_predictions_total[2m]))",
+         "legendFormat": "manual review %"}
+      ]
+    },
+    {
+      "type": "timeseries", "id": 9, "title": "Median offer-to-income ratio",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 24},
+      "fieldConfig": {"defaults": {"unit": "none", "decimals": 2, "custom": {"lineWidth": 2, "fillOpacity": 10}}, "overrides": []},
+      "options": {"legend": {"displayMode": "list", "placement": "bottom", "showLegend": true}, "tooltip": {"mode": "multi"}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "histogram_quantile(0.5, sum by (le) (rate(loan_model_offer_to_income_ratio_bucket[2m])))",
+         "legendFormat": "median offer / income"}
+      ]
+    },
+    {
+      "type": "row", "id": 300, "title": "Data drift", "collapsed": false,
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 32}, "panels": []
+    },
+    {
+      "type": "timeseries", "id": 10, "title": "Average annual income (live) vs training reference",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 33},
+      "fieldConfig": {
+        "defaults": {"unit": "currencyINR", "custom": {"lineWidth": 2, "fillOpacity": 0}},
+        "overrides": [
+          {"matcher": {"id": "byFrameRefID", "options": "B"},
+           "properties": [
+             {"id": "custom.lineStyle", "value": {"fill": "dash", "dash": [10, 10]}},
+             {"id": "color", "value": {"mode": "fixed", "fixedColor": "orange"}}
+           ]}
+        ]
+      },
+      "options": {"legend": {"displayMode": "list", "placement": "bottom", "showLegend": true}, "tooltip": {"mode": "multi"}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "sum(rate(loan_model_input_annual_income_inr_sum[1m])) / sum(rate(loan_model_input_annual_income_inr_count[1m]))",
+         "legendFormat": "live average income"},
+        {"refId": "B", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "max(loan_model_reference_mean{feature=\"annual_income\"})",
+         "legendFormat": "training reference"}
+      ]
+    },
+    {
+      "type": "timeseries", "id": 11, "title": "Average credit score (live) vs training reference",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 33},
+      "fieldConfig": {
+        "defaults": {"unit": "none", "decimals": 0, "custom": {"lineWidth": 2, "fillOpacity": 0}},
+        "overrides": [
+          {"matcher": {"id": "byFrameRefID", "options": "B"},
+           "properties": [
+             {"id": "custom.lineStyle", "value": {"fill": "dash", "dash": [10, 10]}},
+             {"id": "color", "value": {"mode": "fixed", "fixedColor": "orange"}}
+           ]}
+        ]
+      },
+      "options": {"legend": {"displayMode": "list", "placement": "bottom", "showLegend": true}, "tooltip": {"mode": "multi"}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "sum(rate(loan_model_input_credit_score_sum[1m])) / sum(rate(loan_model_input_credit_score_count[1m]))",
+         "legendFormat": "live average credit score"},
+        {"refId": "B", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "max(loan_model_reference_mean{feature=\"credit_score\"})",
+         "legendFormat": "training reference"}
+      ]
+    },
+    {
+      "type": "bargauge", "id": 12, "title": "Credit score distribution (last 5m)",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 16, "x": 0, "y": 41},
+      "fieldConfig": {"defaults": {"unit": "none", "decimals": 0, "min": 0}, "overrides": []},
+      "options": {"orientation": "vertical", "displayMode": "gradient", "showUnfilled": true,
+                  "reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false}},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "sum by (le) (increase(loan_model_input_credit_score_bucket[5m]))",
+         "instant": true, "range": false, "format": "heatmap", "legendFormat": "{{le}}"}
+      ]
+    },
+    {
+      "type": "stat", "id": 13, "title": "Model version",
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "gridPos": {"h": 8, "w": 8, "x": 16, "y": 41},
+      "fieldConfig": {"defaults": {"unit": "none"}, "overrides": []},
+      "options": {"reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false},
+                  "colorMode": "none", "graphMode": "none", "textMode": "name"},
+      "targets": [
+        {"refId": "A", "datasource": {"type": "prometheus", "uid": "prometheus"},
+         "expr": "loan_model_info", "instant": true, "range": false, "legendFormat": "{{model_version}}"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+can you update notebooks\step-1.ipynb file, to add the following functionality at the end 
+
+- Read the file line (data\renewal_pipeline_extract.txt) by line with open and enumerate
+- skip blank lines and lines starting with # - The first remaining line is the header
+- For every other line, inside a try block
+a. check it has the same number of fields as the header
+b. convert seats to int and reject zero or negative values
+c. convert acv_usd to float
+d. convert renewal_date to date with iso format
+- good rows go into a list clean and bad rows go into rejects with line number and reason
+- write output\renewal_pipeline_clean.csv 
+- and output\rewnewal_pipeline_errors.log with one line per reject
+
+do you understand my  requirements? if you have any questions, clarify with me.

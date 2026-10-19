@@ -1,0 +1,18 @@
+.heading {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.title {
+  margin-top: 6px;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+}

@@ -1,0 +1,31 @@
+# CRM & Support MCP server.
+#   make mcp-server-up / mcp-server-down / mcp-server-logs / mcp-server-status
+# Values like ${MCP_PORT} are substituted from the project .env; only the variables listed
+# under `environment` reach the container (API keys in .env are never passed in).
+
+name: aiml-day6
+
+services:
+  crm-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: aiml-day6/crm-mcp:0.1.0
+    container_name: aiml-day6-crm-mcp
+    # No authentication on this demo server: publish on the loopback interface only.
+    ports:
+      - "127.0.0.1:${MCP_PORT:-8765}:8765"
+    environment:
+      MCP_HOST: 0.0.0.0
+      MCP_PORT: "8765"
+      MCP_PATH: /mcp
+      MCP_PUBLIC_URL: http://localhost:${MCP_PORT:-8765}/mcp
+      CRM_DB_PATH: /app/data/crm_support.db
+      CRM_SEED_ON_START: ${CRM_SEED_ON_START:-true}
+      MCP_LOG_LEVEL: ${MCP_LOG_LEVEL:-warning}
+      FORCE_COLOR: "1"
+      TERM: xterm-256color
+    volumes:
+      - ./data/crm:/app/data
+    tty: true
+    restart: unless-stopped

@@ -1,0 +1,24 @@
+Hi, My name is Ramkumar, you can call me Ram. And I'm the facilitator for the training on Complete ML Application Development - E2E
+
+You're help me run a LIVE TRAINING DEMO in front of my particpants of programmers who are new | have moderate experience in ML and ML Engineering. We will build, step by step and end-to-end ML system for a financial lender "Northwind Finance"
+
+Business Goal: Predice the MAXIMUM LOAN AMOUNT (INR) Northwind can offer a loan applicant (target column: max_loan_offered), serve it through a FastAPI REST API in Docker and Monitor it with Prometheus and Grafana.
+
+The current project folder (aiml-e2e) has input data already I have prepared
+- data\raw
+- data\sample
+
+Ground Rules for the whole application development, you should follow
+- Python 3.12 - Use ONLY the libraries and exact versions I give you in prompt. Ask before adding any other dependencies
+- Keep the code simple and readable for learning, teaching - small functions, type hints, short documentation strings, no clever abstractions - I prefer clarify over brevity
+- Use the logging module inside the library - CLI entry points may print a short summary
+- Whenever you need to use randomness, prefer the random state 51
+- NEVER modify anything in data (raw or sample)
+- Do ONLY the step I ask for 
+- Do NOT start any later steps early (for example, you should NOT think about packaging and deploying when we work on Feature Engineering - Model Pipelines)
+- After each step, Run the light acceptance and smoke tests - show me the actual output  and fix anything that fails before you finish
+- End every step with at most 6 bullet points - what you created, key decisions you have made, anything i should tell my participants - No Long Essays, because we can't read lengthy paragraphs, keep as brief as possible
+
+This is an Educational Demonstration with Synthetic Data, it must never be used for real credit decisions, say SO in README.md and in the API description when we get there.
+
+Reply with READY and a one-paragraph restatement of the goal. Do NOT create any files | scripts | commands | markdowns anything YET.

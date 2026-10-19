@@ -1,0 +1,12 @@
+# Allowlist: ignore everything, then add back only what the image build needs.
+# This keeps .env (secrets), data/, .venv/, tests/, logs/ and reports/ out of the build context.
+*
+!pyproject.toml
+!README.md
+!src/
+!models/
+
+# never ship caches or the placeholder file
+**/__pycache__
+**/*.pyc
+models/.gitkeep

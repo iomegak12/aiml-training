@@ -1,0 +1,11 @@
+application_id,application_date,age,gender,marital_status,dependents,education,city,employment_type,years_employed,annual_income,existing_loans_count,monthly_existing_emi,credit_score,loan_purpose,requested_amount,requested_tenure_months,has_collateral,max_loan_offered
+NWF-035344,2024-04-16,27,Female,Married,2,Graduate,Chennai,Business Owner,6.5,1234000,0,0,776,Home,4870000,144,Yes,4923000
+NWF-003600,18/12/2024,47,male,Single,0,Graduate,Bangalore,Salaried,6.4,"10,87,000",1,10100,737,Home,4410000,360,TRUE,4966000
+NWF-004371,2025-09-27,38,Male,Married,1,Postgraduate,Chennai,Salaried,12.3,10.14 L,2,8800,814,Personal,2360000,60,N,1664000
+NWF-022976,29-Jan-2025,39,Male,Married,3,Diploma,Dehradun,Self-Employed,5.8,Rs. 271000,2,3400,714,Business,220000,36,Yes,207000
+NWF-039077,2024-12-12,50,F,Married,2,Diploma,Bengaluru,Salaried,12.3,1186000,2,23500,,Personal,300000,12,No,297000
+NWF-033555,2024-11-24,150,Female,Married,1,Graduate,Jaipur,Salaried,11.5,1910000,1,10300,811,Personal,4260000,36,N,2474000
+NWF-008097,2024-08-04,37,Male,Married,0,graduate,Mysore,Salaried,11.2,62400000,1,5700,842,Home,2530000,120,Y,2033000
+nwf-054663,2025-02-17,38,male,Married,2,Postgraduate,Delhi,Salaried,9.4,1017000,0,500,709,personal,1640000,24,No,806000
+NWF-013391,2024-09-21,35,Female,Married,2,Diploma,Chennai,Salaried,5.3,1077000,0,0,621,Education,1240000,-12,No,1190000
+NWF-030496,2024-01-24,39,Female,Married,,Diploma,Jaipur,SALARIED,13.2,912000,1,8600,683,Personal,820000,48,No,

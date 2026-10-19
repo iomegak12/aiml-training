@@ -1,0 +1,61 @@
+# Prometheus alert rules for the Northwind loan offer API.
+# Check:  promtool check rules alerts.yml
+groups:
+  - name: loan-api
+    rules:
+      - alert: LoanApiDown
+        expr: up{job="loan-api"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Loan API is down"
+          description: "Prometheus could not scrape {{ $labels.instance }} for more than 1 minute."
+
+      - alert: HighServerErrorRate
+        expr: >
+          100 * (sum(rate(loan_api_requests_total{status_code=~"5.."}[1m])) or vector(0))
+          / sum(rate(loan_api_requests_total[1m])) > 5
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "More than 5% of API requests fail with 5xx"
+          description: "5xx share is {{ $value | printf \"%.1f\" }}% over the last minute."
+
+      - alert: HighLatencyP95
+        expr: >
+          histogram_quantile(0.95,
+            sum by (le) (rate(loan_api_request_duration_seconds_bucket{endpoint="/predict"}[1m]))) > 0.5
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "/predict p95 latency above 0.5 s"
+          description: "p95 latency of /predict is {{ $value | printf \"%.3f\" }} s."
+
+      - alert: IncomeDrift
+        # scalar() is required: both sides have different labels and would never match otherwise
+        expr: >
+          abs(
+            (sum(rate(loan_model_input_annual_income_inr_sum[1m]))
+              / sum(rate(loan_model_input_annual_income_inr_count[1m])))
+            / scalar(max(loan_model_reference_mean{feature="annual_income"})) - 1
+          ) > 0.25
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Applicant income drifted more than 25% from training"
+          description: "Live average annual income differs from the training mean by {{ $value | humanizePercentage }}."
+
+      - alert: HighManualReviewShare
+        expr: >
+          100 * (sum(rate(loan_model_predictions_total{manual_review="true"}[2m])) or vector(0))
+          / sum(rate(loan_model_predictions_total[2m])) > 30
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "More than 30% of applications need manual review"
+          description: "Manual review share is {{ $value | printf \"%.1f\" }}% over the last 2 minutes."

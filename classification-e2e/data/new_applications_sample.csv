@@ -1,0 +1,11 @@
+application_id,application_date,age,gender,marital_status,dependents,education,city,residence_type,employment_type,years_employed,annual_income,credit_score,credit_history_months,existing_loans_count,monthly_existing_emi,past_delinquencies_24m,enquiries_6m,credit_card_utilization,loan_purpose,loan_amount,tenure_months,interest_rate,emi,has_collateral,channel
+NWL-APP-0001,2025-03-03,28,Male,Married,1,Graduate,Ahmedabad,Rented,Self-Employed,7.5,280000,858,51,3,3900,0,0,0.38,Personal,146000,60,12.64,3295,No,Online
+NWL-APP-0002,2025-03-06,29,Female,Married,4,Postgraduate,Indore,Family,Self-Employed,5.5,788000,716,85,0,0,1,2,0.13,Consumer Durable,179000,18,16.67,11308,No,Partner Merchant
+NWL-APP-0003,2025-03-09,35,Female,Single,0,Graduate,Pune,Rented,Self-Employed,12.1,1084000,818,86,0,0,0,2,0.26,Home,2531000,252,7.84,20510,Yes,Branch
+NWL-APP-0004,2025-03-12,50,Male,Married,2,Higher Secondary,Bengaluru,Owned,Salaried,10.3,541000,747,205,2,5000,0,2,,Home,1320000,288,8.77,10998,Yes,DSA Agent
+NWL-APP-0005,2025-03-15,42,Male,Married,2,Graduate,Kolkata,Owned,Salaried,4.6,514000,766,143,0,0,1,0,,Personal,301000,60,13.44,6917,No,Online
+NWL-APP-0006,2025-03-18,34,Male,Married,1,Graduate,Mumbai,Rented,Salaried,12.7,816000,729,145,0,0,0,2,0.04,Auto,450000,54,10.2,10426,Yes,Online
+NWL-APP-0007,2025-03-21,37,Male,Married,1,Graduate,Kochi,Rented,Salaried,5.4,805000,668,144,0,0,0,0,,Home,2543000,264,10.75,25171,Yes,Online
+NWL-APP-0008,2025-03-24,21,Female,Married,1,Graduate,Gurugram,Rented,Self-Employed,0.5,1738000,668,10,0,0,2,0,0.81,Home,4061000,228,10.94,42374,Yes,Online
+NWL-APP-0009,2025-03-27,43,Male,Married,1,Graduate,Mumbai,Owned,Self-Employed,5.5,886000,781,85,3,21200,0,0,,Auto,565000,36,8.68,17883,Yes,DSA Agent
+NWL-APP-0010,2025-03-30,44,Female,Single,0,Postgraduate,Hyderabad,Owned,Self-Employed,7.2,2431000,632,145,1,11000,0,3,,Home,13950000,174,11.96,169155,Yes,Branch

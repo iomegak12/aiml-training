@@ -1,0 +1,66 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-tint);
+  color: var(--color-primary-strong);
+  font-size: 0.8rem;
+  font-weight: 500;
+  animation: appear 200ms ease-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
+.done {
+  border-color: #c8ecd6;
+  background: var(--color-success-soft);
+  color: #15803d;
+}
+
+.error {
+  border-color: #fbd5dc;
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.stopped {
+  border-color: var(--color-border);
+  background: #f6f4f8;
+  color: var(--color-muted);
+}
+
+.statusIcon {
+  display: inline-grid;
+}
+
+.spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(155, 77, 202, 0.25);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,33 @@
+Now, I'm in the position of analyzing model drifts based on the traffic generated. 
+
+Step 15: create src/northwind_loans/monitoring.py with a CLI:
+python -m northwind_loans.monitoring --since-minutes 30 --output reports/monitoring_report
+
+1. Read logs/predictions.jsonl (only records newer than --since-minutes if given) and the latest model
+   metadata reference_profile.
+2. Drift: for annual_income, credit_score, monthly_existing_emi, requested_tenure_months, dti (compute it
+   from the logged income and EMI) and offered_amount (compare with reference "predicted_offer"), compute
+   PSI with the SAME make_bins/searchsorted helper and stored edges from Step 6 (epsilon 1e-6 for empty
+   bins). Status: < 0.10 "stable",
+   0.10-0.25 "watch", > 0.25 "investigate". Also compare loan_purpose shares with the reference.
+3. Fairness: by gender and by age_band, report (a) mean offered_amount / annual_income and (b) the manual
+   review rate. For each, report the ratio of the lowest to the highest group and flag "review" if < 0.80.
+   Label this clearly as a screening rule of thumb (borrowed from the US "four-fifths" rule for selection
+   rates), not a legal test. Show group sizes and skip groups with fewer than 30 records.
+4. Volumes: records analysed, time window, share flagged for manual review.
+5. Write reports/monitoring_report.md (readable tables, plain-English verdict at the top) and .json.
+   Exit code 1 if any feature is "investigate" (so it could fail a scheduled job), else 0.
+Add the Makefile target `monitor`.
+
+Then finish README.md: project goal, architecture link (docs/architecture.md), quick start
+(make setup, clean-data, train, test, up, simulate-*, monitor, down), URLs (API docs 8000/docs,
+Prometheus 9090, Grafana 3000 admin/northwind), the business rules, why gender/age are excluded but
+monitored, a "Responsible use" section (synthetic data, not for real credit decisions; years_employed can act
+as a proxy for age; the prediction log holds personal data and would need consent, access control and a
+retention period under India's DPDP Act 2023 in a real system), and a troubleshooting section.
+
+Acceptance checks (run and show):
+- make reset-logs ; run the simulator in normal mode for 60 s ; run monitoring (expect exit 0, all stable)
+- make reset-logs ; run drift mode for 60 s ; run monitoring (expect exit 1; income and credit_score
+  "investigate")
+- show the verdict and fairness tables from the markdown report.

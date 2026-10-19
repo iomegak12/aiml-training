@@ -1,0 +1,49 @@
+Step 3 - Data Engineering
+
+create src\northwind_loans\cleaning.py with pure pandas functions a CLI that reads data/raw/*.csv cleans it, write the output to data/processed/*.parque and reports/data_quality_report.json and print before / after summary table.
+
+structure the module so it can be reused at prediction time.
+
+- clean_applications (df) -> cleaned df, report dictionary
+- standardize_frame (df) -> data frame and report dictionary
+- parse_money (value) -> float | NaN
+
+I want you to following the rules given below in order
+
+- IDs - strip spaces, upper case application_id - Drop exact duplicate rows - then drop duplicate application IDs keeping the LAST occurrence
+- Money - parse annual income with parse money, remove any currency symbols such as Rs., ₹, INR, spaces and commas - trailing L to represent Lakhs - Other money columns are plain numbers - convert with pandas to_numeric
+- Numbers - convert all numeric columns with pandas to_numeric  - use pandas nullable int64 for other columns such as age, no of dependents, existing loans and so on
+- Dates - parse application date by trying explicitly in order - %Y-%m-%d, %d-%m-%Y, %d-%b-%Y - No day first guessing. Report how many as failed (ideally it must be 0)
+- Categories: map every variant to these canonical values (case-space-sensitive) - build the mapping dictionaries from the variants listed in reports/data_profiles.json
+   gender: Male, Female, Other | marital_status: Single, Married, Divorced, Widowed
+   education: Graduate, Postgraduate, Diploma, Higher Secondary
+   employment_type: Salaried, Self-Employed, Business Owner
+   loan_purpose: Home, Personal, Auto, Education, Business
+   city: modern names in Title Case (Bangalore->Bengaluru, Bombay->Mumbai, Gurgaon->Gurugram,
+         Madras->Chennai, Calcutta->Kolkata, New Delhi/NCR->Delhi, Mysore->Mysuru)
+   has_collateral: True/False from Yes/No/Y/N/TRUE/FALSE/1/0
+   Any non-empty value that does not map must be counted in the report as "unmapped" (expected 0).
+- data entry related fix - annual income above configuration of INCOME_PAISE_THRESHOLD (as per the business requirement it's 2 Crores) - was entered 100x too large - divide by 100 and count it
+- impossible values - annual income <= 0, years employed < 0, > age - 14 - missing NaNs, counted per rule - refer the configuration VALID_RANGES
+- Do NOT impute anything and do NOT drop rows with a missing target here
+
+The report must contain - rows in and out - duplicates removed (exact and by ID) - incomes parsed from text, incomes divided by 100, impossible values set to missing per rule, unmapped categories per column, date parse failures, and missing values per column after cleaning
+
+I prefer to have acceptance tests like the below
+
+- the CLI summary table
+- assert clean_df.application_id.is_unique
+- print sorted values (unique) of all categorical columns
+- parse money tests
+- min/max application date
+
+Do you understand my Data Engineering related task requirements? Let's have a debate in MCQs based QAs for our both uniformed understandings.
+
+Let's go
+
+
+
+
+
+
+

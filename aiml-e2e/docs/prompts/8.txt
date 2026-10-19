@@ -1,0 +1,44 @@
+Now, i'm in the position of defining Prediction Pipeline and Business Rules
+
+Step 7: Prediction Pipeline
+
+Create src\northwind_loans\predict.py
+
+Define a class named LoanOfferPredictor, which has the following functionalities
+
+	- in the constructor, load the pipeline and metadata once with the registry load model (latest version)
+	- predict_frame - accepting data frame and returns data frame - apply cleaning standardize frame (same label
+		mapping, money parsing, impossible value rules as training - No Deduplication) - run the pipeline -
+		then apply the business rules
+	- predict_one(record: dict) -> dictionary - wraps predict frame for a single record
+
+Business Rules:
+
+a. clip at 0 (rule name floor at zero)
+b. cap at absolute cap income multiple x annual income (cap 5x income)
+c. round down to the nearest round offer to (in 1000s)
+d. manual review is TRUE if credit score < 600, dti > 0.6, give review reasons as list
+
+	if credit score is missing, set manual review = true with reason credit score missing
+	the model imputes the median score, which would otherwise give thin-file application's prime offers based on other characteristics
+	
+
+output per applicant - application id, offered amount (int), raw model estimate (rounded), manual review, review reasons,
+	rules applied, model version
+
+	if annual income is missing or invalid after cleaning, do NOT predict. return offered amount = None, and review reasons as annual income missing.
+
+CLI - python -m northwind_loads.predict 
+	accept inputs csv file
+	outputs to a csv file
+
+print a table with application id, max loan offered (actual, if present), offered anmount, % difference. manual review if required, and reasons.
+
+My acceptance checks would be as below
+
+	- run the CLI
+	- use sample 10 records
+	- show the table
+	- assert every offered amount is NONE or >=0 <= 5x income, divisible by 1000.
+
+Hope you have got my requirements clear? You can ask me questions in MCQs style so we both are aligned.

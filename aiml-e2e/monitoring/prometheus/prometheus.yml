@@ -1,0 +1,18 @@
+# Prometheus config for the Northwind loan API (docker compose network).
+# 5s matches the Grafana dashboard refresh and gives rate(...[1m]) ~12 samples.
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+rule_files:
+  - alerts.yml
+
+scrape_configs:
+  - job_name: loan-api
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["api:8000"]
+
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]

@@ -1,0 +1,128 @@
+.row {
+  display: flex;
+  padding-left: 46px;
+  animation: shake 360ms ease-out;
+}
+
+@keyframes shake {
+  20% {
+    transform: translateX(-3px);
+  }
+  40% {
+    transform: translateX(3px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+}
+
+.bubble {
+  flex: 1;
+  max-width: 600px;
+  border: 1px solid #fbd5dc;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #fff6f8 0%, #fff 100%);
+  box-shadow: var(--shadow-sm);
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  padding: 14px 14px 8px 16px;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: 0.98rem;
+}
+
+.text {
+  margin-top: 2px;
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+}
+
+.dismiss {
+  align-self: flex-start;
+  padding: 4px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-subtle);
+}
+
+.dismiss:hover {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.countdown {
+  display: grid;
+  gap: 6px;
+  margin: 2px 16px 8px 62px;
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+}
+
+.track {
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: #f3e8f7;
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  background: var(--gradient-pill);
+  transition: width 250ms linear;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 14px 12px 62px;
+}
+
+.details {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.details summary {
+  cursor: pointer;
+  width: max-content;
+}
+
+.details dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 12px;
+  margin: 8px 0 0;
+}
+
+.details dt {
+  color: var(--color-subtle);
+}
+
+.details dd {
+  margin: 0;
+  word-break: break-all;
+}

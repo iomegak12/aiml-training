@@ -1,0 +1,43 @@
+Now, I shall be focusing onto Training Pipeline ...
+
+Step 5: Training Pipeline
+
+create northwind_loans\train.py file with a CLI command 
+
+	for example, python -m northwind_loans.train
+
+Follow the instructions below 
+
+1. Load cleaned parquet files from data\processed, drop rows where the target is MISSING - report the count
+2. training, testing split should be 80%, 20% - with random state from the configuration
+3. build two pipelines 
+
+A. Engineering Pipeline
+B. Baseline Pipeline
+
+Engineering Pipeline - It's the production candidate.
+
+A. Impute - Column Transformer with Simple Imputer and the strategy median on ROW NUMERICAL METRIC INPUTS and simple imputer with the strategy most frequent on CATEGORICAL INPUTS, verbose feature name is NOT required, and output should be Pandas Data Frame compatible and importantly keep original column names
+B. Features - Policy Features
+C. pre process - column transformer with standard scaler on RAW NUMERICAL INPUTS + ENGINEERING NUMERICAL INPUTS and One Hot Encoding for ALL CATEGORICAL INPUTS - Unknown Can be ignored
+D. Model - Linear Regression
+
+Baseline Pipeline - Same imputation and one hot encoding, raw inputs only (No Policy Features) and then use the same Linear Regression
+
+4. Evaluate each with 5-fold industry standard cross validation on the training set (common parameters such as KFold, Shuffling to be done, and stick to the same random value from the configuration - It's guaranteed to be selective in records)
+
+5. Print a comparison table and the 8 target coefficients of the engineered model with feature names so I can easily validate myself how feature introduction is helping me
+
+6. write the reports in reports\training_report.md and reports\training_report.json
+
+7. return and keep the fitted engineered pipeline and the metrics - step 6 shall save them ... Remeber do NOT save the model in this step at this moment.
+
+My acceptance checks would be as below
+
+- run the CLI
+- show the comparison table
+- show the coefficients
+
+Do you get my requirements related to Training Pipeline? Let's have a debate of MCQs based QAs so we both are aligned in what we would like to achieve in this step.
+
+Let's go

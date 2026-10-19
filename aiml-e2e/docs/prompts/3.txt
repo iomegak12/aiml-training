@@ -1,0 +1,20 @@
+Let's go to the next step 2 - Profile the raw data with Pandas. Do NOT clean anything yet
+
+- create a src\northwind_loans\profiling.py with a function profile_raw (path) returning a dictionary and a CLI that writes reports data profile in JSON format and data profile markdown (readable tables) and prints a short summary
+
+- read the CSV with data type string, keep default NA false, na values = empty array so nothing is AUTO CONVERTED
+
+The profile must include
+a. Row and Column counts
+b. missing values per column (count and percentage is ideal)
+c. exact duplicate rows and duplicate application id values after stripping spaces and upper casing
+d. for text columns such as GENDER, MARITAL STATUS, education, city, employment type, loan purpose, has collateral - number with dictinct values and the top 15 values with counts
+e. for numeric looking columns (age, dependents, years employed, annual income, existing loans count, monthly existing EMI, credit score, requested amount, request tenure in months, max loan offered) - count of non empty values with sample 5 values
+f. application date - count of values matching YYYY-MM-DD, DD/MM/YYYY, DD-Mon-YYYY and other
+g. out of range counts using configuration valid ranges plus annual income <= 0 and annual income >= income_paise _threshold, years employed > age - 14  years
+
+i prefer to have acceptance tests - run the CLI and show the summary the pring the missing value table, distinct value counts from the JSON 
+
+do you get my requirements on Data Profiling? If you have a need to ask me questions, let's have MCQs based QAs rather than prose style.
+
+Let's go

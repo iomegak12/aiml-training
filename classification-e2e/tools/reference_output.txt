@@ -1,0 +1,144 @@
+=== 1. raw profile ===
+rows 50000 | columns 29 | exact duplicate rows 450
+target values: {'No': 42022, 'Yes': 4842, '0': 912, 'N': 900, 'Current': 890, nan: 148, '1': 100, 'Default': 95, 'Y': 91}
+
+=== 2. cleaning ===
+after de-duplication: 49400
+  age out of 21-70 -> missing: 25
+  credit score out of 300-900 -> missing: 40
+  interest rate < 1 -> x100: 247
+  card utilisation > 2 -> /100: 272
+  negative loan amount -> sign fixed: 12
+unmapped categories left: {'gender': 0, 'employment_type': 0, 'loan_purpose': 0, 'channel': 0}
+rows without an outcome (dropped): 148
+modelling rows: 49252 | defaults: 5052 | default rate: 0.1026
+
+=== 3. what moves default (univariate) ===
+thin file: default 0.144 vs 0.098
+foir_band       <30%     30-45%    45-60%    60-75%      75%+
+count      23059.000  13004.000  7116.000  3185.000  2544.000
+mean           0.072      0.088     0.108     0.144     0.385
+cs_band     <650    650-699    700-749   750-799      800+
+count    6105.00  10865.000  13505.000  9380.000  4259.000
+mean        0.25      0.127      0.068     0.044     0.024
+{'Auto': 0.053, 'Home': 0.072, 'Consumer Durable': 0.085, 'Education': 0.087, 'Personal': 0.118, 'Business': 0.218}
+{'Branch': 0.093, 'Online': 0.098, 'Partner Merchant': 0.1, 'DSA Agent': 0.122}
+employment: {'Business Owner': 0.113, 'Salaried': 0.095, 'Self-Employed': 0.119}
+residence: {'Family': 0.11, 'Owned': 0.091, 'Rented': 0.106}
+past delinquencies 0 / 1 / 2+: [0.089, 0.185, 0.367]
+enquiries 0-1 / 2-3 / 4+: [0.087, 0.125, 0.202]
+tier-3 cities vs others: 0.112 0.101
+by gender (actual default rate): {'Female': 0.105, 'Male': 0.101, 'Other': 0.101}
+
+=== 4. out-of-time split ===
+train (Jan 2023 - Jun 2024): 36982 default 0.1019 | test (Jul - Dec 2024): 12270 default 0.1047
+
+=== 5. models (5-fold CV on train) ===
+  logistic C=0.01: CV AUC 0.792
+  logistic C=0.1: CV AUC 0.792
+  logistic C=1: CV AUC 0.792
+  logistic C=10: CV AUC 0.792
+  L1 (C=0.01) keeps 19 of 44 | CV AUC 0.787
+  KNN k=5: CV AUC 0.645 (12,000-row sample)
+  KNN k=25: CV AUC 0.720 (12,000-row sample)
+  KNN k=51: CV AUC 0.735 (12,000-row sample)
+  KNN k=101: CV AUC 0.749 (12,000-row sample)
+  KNN k=151: CV AUC 0.751 (12,000-row sample)
+  KNN k=101 unscaled: CV AUC 0.711 (sample)
+logistic regression  ROC AUC 0.792 | PR AUC 0.407
+KNN k=101            ROC AUC 0.762 | PR AUC 0.352
+random PR AUC = default rate 0.102
+
+Top logistic coefficients (per SD for numeric):
+                                coef  odds_ratio
+cat__loan_purpose_Home        -0.760       0.468
+num__foir                      0.713       2.040
+num__credit_score             -0.622       0.537
+cat__employment_type_Salaried -0.545       0.580
+cat__channel_Branch           -0.457       0.633
+cat__residence_type_Owned     -0.435       0.647
+num__card_util_filled          0.380       1.462
+cat__channel_Online           -0.367       0.693
+cat__loan_purpose_Auto        -0.341       0.711
+cat__residence_type_Family    -0.326       0.722
+cat__education_Postgraduate   -0.319       0.727
+cat__residence_type_Rented    -0.307       0.735
+
+LEAKAGE: model on max_dpd_12m alone, CV AUC 1.0
+with interest_rate added: CV AUC 0.792
+
+=== 6. threshold economics (CV probabilities on train) ===
+assumptions: a good loan earns 7% of the amount; a default loses 45% of it -> break-even PD 0.135
+ reject_if_PD>=  approval_rate  bad_rate_approved  defaulters_rejected  goods_rejected  profit_crore
+          0.050          0.441              0.028                0.878           0.523       126.570
+          0.080          0.609              0.039                0.770           0.348       155.555
+          0.100          0.687              0.044                0.702           0.269       164.473
+          0.120          0.745              0.050                0.635           0.212       168.841
+          0.135          0.778              0.053                0.597           0.179       170.946
+          0.150          0.806              0.055                0.564           0.152       172.540
+          0.200          0.869              0.064                0.456           0.094       168.971
+          0.250          0.909              0.071                0.370           0.060       159.044
+          0.300          0.934              0.075                0.314           0.038       153.121
+          0.500          0.978              0.088                0.156           0.007       124.117
+          1.010          1.000              0.102                0.000           0.000        92.013
+profit-maximising cut-off: 0.15
+
+=== 7. final check on out-of-time test ===
+test ROC AUC 0.801 | PR AUC 0.411 | Brier 0.0772
+cut-off 0.5: TN 10904 FP 81 FN 1097 TP 188 | accuracy 0.904 precision 0.699 recall 0.146 | approval rate 0.978 | bad rate in approved 0.091
+cut-off 0.15: TN 9270 FP 1715 FN 538 TP 747 | accuracy 0.816 precision 0.303 recall 0.581 | approval rate 0.799 | bad rate in approved 0.055
+  test profit, cut-off 1.01: Rs 28.7 crore (approve-everyone = 1.01)
+  test profit, cut-off 0.15: Rs 59.8 crore (approve-everyone = 1.01)
+always 'no default' accuracy: 0.895
+
+=== 8. calibration and imbalance (CV on train) ===
+plain                  AUC 0.792 Brier 0.0755 mean PD 0.102 (actual 0.102) | top-fifth predicted 0.295 vs actual 0.291
+balanced               AUC 0.792 Brier 0.1807 mean PD 0.395 (actual 0.102) | top-fifth predicted 0.746 vs actual 0.291
+balanced + calibrated  AUC 0.792 Brier 0.0756 mean PD 0.102 (actual 0.102) | top-fifth predicted 0.292 vs actual 0.291
+SMOTE                  AUC 0.790 Brier 0.1817 mean PD 0.391
+under-sampling         AUC 0.791 Brier 0.1818 mean PD 0.396
+expected loss on test book (PD x LGD x amount), Rs crore: plain 74.1 | actual loss 74.0
+  balanced model would forecast 281.4
+
+=== 9. fairness check on test at the chosen cut-off ===
+        defaulted  pd_hat  approved
+gender                             
+Female      0.110   0.106     0.790
+Male        0.101   0.101     0.805
+Other       0.108   0.104     0.800
+          defaulted  pd_hat  approved
+age                                  
+(20, 25]      0.134   0.131     0.707
+(25, 35]      0.101   0.105     0.796
+(35, 50]      0.100   0.093     0.830
+(50, 70]      0.088   0.083     0.848
+
+=== 10. K-Means borrower segments ===
+  k=2 inertia 240291 silhouette 0.184
+  k=3 inertia 210066 silhouette 0.177
+  k=4 inertia 190428 silhouette 0.178
+  k=5 inertia 174878 silhouette 0.154
+  k=6 inertia 163239 silhouette 0.151
+  k=7 inertia 154138 silhouette 0.148
+         borrowers  income_median  credit_score   foir  card_util     age  history_m  thin_file  default_rate
+segment                                                                                                      
+0            13217       961000.0       737.280  0.299      0.212  44.119    186.443      0.005         0.058
+1             5799       896000.0       710.630  0.706      0.194  34.370     82.973      0.085         0.230
+2            19653       840000.0       734.152  0.267      0.095  30.251     46.456      0.223         0.070
+3            10583       881500.0       676.265  0.307      0.637  33.656     83.704      0.021         0.149
+
+=== 11. new applications ===
+application_id     loan_purpose  loan_amount  credit_score  foir    pd        decision  expected_loss
+  NWL-APP-0001         Personal       146000           858  0.31 0.016         Approve         1050.0
+  NWL-APP-0002 Consumer Durable       179000           716  0.17 0.067         Approve         5360.0
+  NWL-APP-0003             Home      2531000           818  0.23 0.006         Approve         6691.0
+  NWL-APP-0004             Home      1320000           747  0.35 0.020         Approve        11971.0
+  NWL-APP-0005         Personal       301000           766  0.16 0.028         Approve         3850.0
+  NWL-APP-0006             Auto       450000           729  0.15 0.010         Approve         2074.0
+  NWL-APP-0007             Home      2543000           668  0.38 0.036         Approve        41757.0
+  NWL-APP-0008             Home      4061000           668  0.29 0.151 Refer / decline       275905.0
+  NWL-APP-0009             Auto       565000           781  0.53 0.038         Approve         9716.0
+  NWL-APP-0010             Home     13950000           632  0.89 0.228 Refer / decline      1429604.0
+
+=== 12. sensitivity ===
+CV AUC without age: 0.792

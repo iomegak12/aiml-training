@@ -1,0 +1,34 @@
+can you analyze and understand the following URLs, 
+
+https://docs.langchain.com/oss/python/deepagents/context-engineering
+https://docs.langchain.com/oss/python/deepagents/skills
+https://docs.langchain.com/oss/python/deepagents/memory
+https://docs.langchain.com/oss/python/deepagents/retrieval
+https://docs.langchain.com/oss/python/deepagents/quickstart
+https://docs.langchain.com/oss/python/deepagents/tools
+
+which would help you to how to design an agent with appropriate tools. This also helps you to understand how retrieval from vector databases can be done, how to add skills to an agent, how to optimize context engineering specific activities such as compression / summarization and so on.
+
+This also guides you to how to handle short-term and long-term memory for agents to support memories.
+
+I shall be developing an agent, which performs the following activities.
+
+- hybrid search for RAG (similarity, semantic, keyword search and metadata filters)
+- advanced search (Before searching, it might tidy up or rephrase the question - After searching, it double checks which of the found chunks are TRULY the most relevant, and puts them in the best order - prepare the context and answer them)
+- multi-query RAG (A user asked question is divided into multiple sub-questions. And each question is separately searched for results, combine / summarize the results before the question is answered by LLM)
+- corrective RAG (After retrieving, it asks “are these chunks relevant actually to the user questions?” - If it’s NOT matching, rephrases the question, searches a different source and admits if it does NOT know. After writing, it can also check, “Is every statement in my answer supported by the sources?”)
+- agentic RAG (An agent, which decides whether to search at all, where to search, where to search again. It might check the policy library, then look up the customers’ account in the CRM, then search the support history, and then answer.)
+
+i want to add domain based skills (HR and Product Manuals/Guides) to the agent, so the agent would pick appropriate vector stores / or both of them depends ont he question the user asked. If the question is related to current trends, it can use SERPER API (i have already provided SERPER_API_KEY in .env) to perform google search.
+
+I also want to evaluate the RAG result before it's handed over to the client, with another JUDGE LLM (i have two configuration settings for the same - JUDGE_OPENAI_MODEL and JUDGE_OPENAI_API_KEY. also have a mechanism of requerying, retrying based on the score provided by judge. for example,  if the evaluation score is below 80%, then it should automatically perform retrying (max retries 3 - configurable in .env)
+
+- Modularize the code in src folder and appropriate sub directories
+- create a folder named notebooks and demonstrate the various examples of these agentic RAG features (notebook should contain only use cases and executions)
+- update readme, troubleshooting and other relevant files
+- keep skills in src\skills folder
+
+QUESTION for my CLARIFICATIONS : i would like to reuse skills in claude code, OpenAI codex and GitHub copilot - what's your recommendations doing the same?
+
+Do you understand all my requirements? let's have serious MCQs based QAs so we both are aligned in what we would like to design and implement.
+

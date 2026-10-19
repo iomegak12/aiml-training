@@ -1,0 +1,14 @@
+Hi, My name is Ramkumar.
+
+Can you analyze and understand the following URLs related to LangChain | DeepAgents documentation to showcase how to build an agent with tools and streaming capabilities.
+
+<pasted_content id="6505">
+https://docs.langchain.com/oss/python/deepagents/quickstart
+https://docs.langchain.com/oss/python/deepagents/models
+https://docs.langchain.com/oss/python/deepagents/tools
+https://docs.langchain.com/oss/python/deepagents/streaming
+</pasted_content id="6505">
+
+Let me know what you have understood in brief - bulleted points should be fine. If you have any doubts, clarify with me in MCQs based QAs.
+
+Go ahead.

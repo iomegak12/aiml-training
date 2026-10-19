@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets - never commit API keys
+.env
+.env.*
+!.env.example
+
+# Generated corpus (reproducible with `make generate`)
+data/cache/
+data/corpus/
+data/golden_qa/
+data/vectorstores/
+
+# Agent runtime state, evaluation reports and the CRM database (recreated on demand)
+data/agent_state/
+data/eval/
+data/crm/

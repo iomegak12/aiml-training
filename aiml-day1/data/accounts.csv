@@ -1,0 +1,601 @@
+account_id,account_name,industry,segment,region,country,employee_count,customer_since,sales_channel,has_csm
+ACC-1001,Summit Academy,Education,Mid-Market,APJC,Japan,1220,2015-07-24,Direct,False
+ACC-1002,Lakeshore University,Education,Mid-Market,Americas,Canada,852,2024-10-31,Partner,True
+ACC-1003,Apex Finance,Financial Services,Enterprise,APJC,Singapore,8575,2019-06-18,Direct,True
+ACC-1004,Alpine Labs,Technology,Enterprise,EMEA,France,33043,2017-09-01,Direct,True
+ACC-1005,Silverline Institute,Education,SMB,Americas,Mexico,120,2019-02-16,Partner,True
+ACC-1006,Sahyadri Software,Technology,SMB,APJC,Australia,65,2016-12-10,Partner,False
+ACC-1007,Unity Retail,Retail,Mid-Market,APJC,Singapore,1951,2024-01-03,Partner,False
+ACC-1008,Lakeshore Power,Energy & Utilities,Mid-Market,APJC,India,424,2025-06-27,Partner,False
+ACC-1009,Aurora Health,Healthcare,SMB,Americas,Canada,30,2014-12-23,Partner,False
+ACC-1010,Lakeshore Labs,Technology,Mid-Market,EMEA,Germany,1098,2022-04-06,Direct,False
+ACC-1011,Pinnacle Insurance,Financial Services,Enterprise,Americas,United States,54890,2017-11-09,Partner,True
+ACC-1012,Quarry Capital,Financial Services,Enterprise,APJC,Australia,5485,2014-07-18,Partner,False
+ACC-1013,Vantage Outfitters,Retail,Mid-Market,EMEA,South Africa,444,2024-08-07,Partner,False
+ACC-1014,Apex Supermarkets,Retail,Mid-Market,APJC,Singapore,344,2014-09-17,Partner,False
+ACC-1015,Banyan Systems,Technology,SMB,Americas,United States,175,2016-05-14,Partner,True
+ACC-1016,Zenith Hospitals,Healthcare,Mid-Market,Americas,Canada,421,2014-04-18,Direct,False
+ACC-1017,Silverline Power,Energy & Utilities,SMB,EMEA,France,71,2019-06-02,Partner,True
+ACC-1018,Pinnacle Health,Healthcare,Mid-Market,Americas,United States,2448,2020-11-22,Partner,False
+ACC-1019,Monsoon Stores,Retail,Enterprise,APJC,India,2598,2017-09-08,Direct,False
+ACC-1020,Meridian Renewables,Energy & Utilities,SMB,EMEA,United Kingdom,81,2014-10-28,Partner,False
+ACC-1021,Unity Outfitters,Retail,SMB,APJC,Australia,72,2015-05-03,Partner,True
+ACC-1022,Lakeshore Academy,Education,SMB,Americas,United States,153,2024-09-23,Partner,False
+ACC-1023,Falcon College,Education,Public Sector,APJC,Singapore,2007,2023-04-07,Direct,True
+ACC-1024,Granite Renewables,Energy & Utilities,Mid-Market,APJC,Japan,643,2024-10-08,Direct,True
+ACC-1025,Quarry Outfitters,Retail,SMB,APJC,Singapore,30,2020-02-07,Partner,False
+ACC-1026,Oakridge Public Works,Government,Public Sector,Americas,United States,9069,2020-04-11,Partner,True
+ACC-1027,Sahyadri Securities,Financial Services,Mid-Market,EMEA,UAE,1522,2023-01-13,Direct,False
+ACC-1028,Ironwood Outfitters,Retail,Mid-Market,Americas,United States,342,2021-02-01,Partner,False
+ACC-1029,Banyan Hospitals,Healthcare,Public Sector,Americas,United States,2330,2019-01-07,Partner,True
+ACC-1030,Granite Retail,Retail,SMB,EMEA,UAE,190,2017-05-10,Direct,True
+ACC-1031,Ironwood Health,Healthcare,SMB,EMEA,South Africa,20,2019-08-01,Partner,False
+ACC-1032,Orchid Steelworks,Manufacturing,Mid-Market,APJC,Australia,497,2014-09-26,Direct,False
+ACC-1033,Vantage Clinics,Healthcare,SMB,Americas,United States,81,2016-03-18,Partner,False
+ACC-1034,Sahyadri Finance,Financial Services,Enterprise,Americas,United States,7228,2022-06-23,Direct,True
+ACC-1035,Tidewater Utilities,Energy & Utilities,SMB,EMEA,United Kingdom,39,2023-12-24,Partner,False
+ACC-1036,Nimbus Retail,Retail,SMB,Americas,United States,63,2015-03-04,Direct,False
+ACC-1037,Zenith Steelworks,Manufacturing,SMB,Americas,United States,31,2015-02-11,Direct,True
+ACC-1038,Cedarline Fabrication,Manufacturing,Mid-Market,EMEA,France,846,2014-12-26,Partner,True
+ACC-1039,Lakeshore Cloud,Technology,SMB,Americas,Canada,119,2023-02-06,Partner,False
+ACC-1040,Unity Utilities,Energy & Utilities,SMB,EMEA,UAE,85,2017-07-30,Partner,False
+ACC-1041,Brightpath Labs,Technology,Enterprise,Americas,Canada,3360,2017-10-03,Partner,True
+ACC-1042,Falcon Industries,Manufacturing,SMB,APJC,Australia,168,2014-02-22,Partner,False
+ACC-1043,Evergreen Steelworks,Manufacturing,Mid-Market,EMEA,United Kingdom,374,2025-03-06,Direct,False
+ACC-1044,Coastal Bank,Financial Services,SMB,Americas,United States,138,2018-12-28,Partner,True
+ACC-1045,Silverline Software,Technology,Mid-Market,APJC,Japan,573,2023-03-02,Direct,False
+ACC-1046,Coastal Systems,Technology,SMB,APJC,Singapore,144,2022-02-18,Partner,True
+ACC-1047,Meridian Labs,Technology,Mid-Market,Americas,United States,401,2015-08-19,Direct,False
+ACC-1048,Kestrel Fabrication,Manufacturing,SMB,Americas,United States,32,2023-03-19,Partner,True
+ACC-1049,Meridian Transit Authority,Government,Public Sector,EMEA,France,3494,2020-04-29,Partner,True
+ACC-1050,Redstone Institute,Education,Public Sector,Americas,United States,568,2020-12-11,Direct,True
+ACC-1051,Sahyadri Power,Energy & Utilities,SMB,Americas,United States,35,2016-04-20,Direct,False
+ACC-1052,Rhine Labs,Technology,SMB,Americas,Brazil,124,2023-09-26,Partner,False
+ACC-1053,Banyan Fabrication,Manufacturing,SMB,APJC,Australia,165,2024-09-16,Partner,False
+ACC-1054,Vantage Fabrication,Manufacturing,Mid-Market,EMEA,United Kingdom,301,2018-09-03,Partner,False
+ACC-1055,Sahyadri Fabrication,Manufacturing,SMB,EMEA,UAE,185,2015-01-24,Partner,False
+ACC-1056,Saffron University,Education,Enterprise,APJC,India,31526,2023-10-04,Direct,True
+ACC-1057,Unity Software,Technology,Enterprise,EMEA,UAE,39654,2024-03-14,Partner,True
+ACC-1058,Saffron College,Education,Enterprise,EMEA,United Kingdom,23010,2019-10-28,Direct,True
+ACC-1059,Coastal Securities,Financial Services,Mid-Market,Americas,United States,1180,2020-08-28,Partner,False
+ACC-1060,Vantage Municipal Council,Government,Public Sector,Americas,United States,3900,2016-07-25,Direct,True
+ACC-1061,Banyan Steelworks,Manufacturing,SMB,EMEA,United Kingdom,104,2014-10-11,Partner,False
+ACC-1062,Tidewater Cloud,Technology,Mid-Market,EMEA,South Africa,2075,2024-11-07,Direct,False
+ACC-1063,Lakeshore Grid,Energy & Utilities,SMB,EMEA,United Kingdom,25,2019-07-21,Partner,True
+ACC-1064,Quarry Academy,Education,Public Sector,APJC,India,1719,2017-02-28,Direct,True
+ACC-1065,Lakeshore Utilities,Energy & Utilities,Mid-Market,EMEA,Germany,295,2021-12-20,Direct,False
+ACC-1066,Oakridge Academy,Education,Enterprise,EMEA,France,50346,2014-04-20,Direct,True
+ACC-1067,Oakridge Retail,Retail,SMB,EMEA,UAE,61,2014-12-02,Partner,False
+ACC-1068,Thames Transit Authority,Government,Public Sector,Americas,Mexico,7020,2016-10-15,Partner,True
+ACC-1069,Northgate Utilities,Energy & Utilities,Mid-Market,Americas,United States,1734,2019-03-07,Partner,True
+ACC-1070,Saffron Academy,Education,Mid-Market,Americas,United States,2448,2018-03-20,Partner,False
+ACC-1071,Monsoon Revenue Dept,Government,Public Sector,Americas,United States,941,2016-02-26,Direct,True
+ACC-1072,Orchid Power,Energy & Utilities,Mid-Market,Americas,United States,1575,2018-01-14,Direct,False
+ACC-1073,Bluefield Fabrication,Manufacturing,Mid-Market,APJC,Singapore,1929,2017-11-02,Direct,False
+ACC-1074,Rhine Schools,Education,Mid-Market,Americas,Canada,279,2020-01-12,Direct,True
+ACC-1075,Kaveri Securities,Financial Services,SMB,Americas,United States,134,2020-06-20,Partner,True
+ACC-1076,Pinnacle Academy,Education,SMB,Americas,United States,48,2024-02-25,Partner,False
+ACC-1077,Rhine Clinics,Healthcare,SMB,Americas,Brazil,102,2023-04-10,Partner,False
+ACC-1078,Nimbus Stores,Retail,SMB,EMEA,Germany,73,2017-05-12,Partner,True
+ACC-1079,Cedarline Schools,Education,Enterprise,EMEA,United Kingdom,5707,2024-05-17,Partner,True
+ACC-1080,Apex Software,Technology,Mid-Market,APJC,India,341,2019-12-27,Direct,True
+ACC-1081,Alpine Clinics,Healthcare,Mid-Market,EMEA,United Kingdom,327,2016-02-27,Direct,False
+ACC-1082,Falcon Utilities,Energy & Utilities,Mid-Market,Americas,United States,317,2017-11-28,Direct,True
+ACC-1083,Northgate Retail,Retail,Mid-Market,APJC,India,1085,2022-07-11,Partner,False
+ACC-1084,Sahyadri Bank,Financial Services,Mid-Market,Americas,United States,561,2023-06-12,Direct,True
+ACC-1085,Aurora Transit Authority,Government,Public Sector,Americas,United States,1166,2018-04-20,Partner,False
+ACC-1086,Pinnacle City Services,Government,Public Sector,Americas,United States,7489,2015-10-24,Partner,True
+ACC-1087,Aurora Schools,Education,Mid-Market,EMEA,Germany,1215,2016-03-16,Partner,True
+ACC-1088,Oakridge Stores,Retail,SMB,EMEA,South Africa,78,2015-03-11,Partner,False
+ACC-1089,Summit Health,Healthcare,Mid-Market,Americas,Canada,2152,2022-01-12,Direct,False
+ACC-1090,Kestrel Outfitters,Retail,Mid-Market,EMEA,Germany,607,2019-10-13,Direct,False
+ACC-1091,Brightpath Software,Technology,Mid-Market,Americas,United States,1713,2019-03-10,Partner,False
+ACC-1092,Kaveri College,Education,Enterprise,EMEA,South Africa,3174,2021-09-21,Direct,True
+ACC-1093,Kestrel Motors,Manufacturing,Mid-Market,Americas,United States,1373,2023-07-11,Partner,True
+ACC-1094,Alpine Components,Manufacturing,SMB,Americas,United States,242,2023-02-22,Partner,True
+ACC-1095,Meridian Stores,Retail,SMB,Americas,Brazil,169,2015-07-30,Partner,True
+ACC-1096,Zenith Health,Healthcare,Mid-Market,EMEA,Germany,949,2020-10-11,Partner,False
+ACC-1097,Tidewater Software,Technology,SMB,Americas,Canada,97,2024-02-22,Partner,True
+ACC-1098,Bluefield College,Education,SMB,Americas,United States,48,2022-11-23,Partner,False
+ACC-1099,Orchid Cloud,Technology,Enterprise,Americas,United States,21665,2017-10-14,Direct,True
+ACC-1100,Northgate Academy,Education,Mid-Market,APJC,India,1473,2018-07-07,Partner,False
+ACC-1101,Redstone Clinics,Healthcare,SMB,APJC,India,248,2024-03-26,Direct,False
+ACC-1102,Alpine Schools,Education,Mid-Market,EMEA,Germany,776,2014-05-18,Partner,False
+ACC-1103,Vantage University,Education,Enterprise,Americas,United States,3037,2020-01-15,Partner,True
+ACC-1104,Cedarline Software,Technology,SMB,APJC,Singapore,90,2015-05-03,Partner,False
+ACC-1105,Coastal Capital,Financial Services,Enterprise,APJC,India,3649,2024-04-13,Partner,True
+ACC-1106,Kestrel Revenue Dept,Government,Public Sector,EMEA,France,1302,2014-06-12,Direct,True
+ACC-1107,Lotus Finance,Financial Services,Mid-Market,Americas,Canada,532,2014-04-09,Partner,False
+ACC-1108,Saffron Systems,Technology,Enterprise,Americas,Canada,25522,2017-10-12,Partner,True
+ACC-1109,Falcon Cloud,Technology,SMB,Americas,United States,31,2016-04-20,Direct,True
+ACC-1110,Harborview Hospitals,Healthcare,Public Sector,APJC,Japan,956,2019-09-12,Partner,True
+ACC-1111,Thames Renewables,Energy & Utilities,Mid-Market,EMEA,South Africa,277,2017-06-11,Direct,True
+ACC-1112,Zenith Revenue Dept,Government,Public Sector,Americas,United States,15225,2018-02-04,Direct,True
+ACC-1113,Saffron Steelworks,Manufacturing,Mid-Market,Americas,Canada,1234,2020-06-29,Partner,False
+ACC-1114,Banyan Institute,Education,SMB,EMEA,South Africa,22,2020-06-11,Direct,True
+ACC-1115,Quarry Systems,Technology,SMB,Americas,Canada,21,2024-09-29,Partner,False
+ACC-1116,Redstone Steelworks,Manufacturing,Enterprise,APJC,India,14758,2019-07-11,Partner,True
+ACC-1117,Kaveri Steelworks,Manufacturing,Mid-Market,APJC,Japan,479,2020-06-26,Partner,True
+ACC-1118,Zenith Finance,Financial Services,SMB,EMEA,United Kingdom,90,2021-10-17,Partner,False
+ACC-1119,Harborview Systems,Technology,Enterprise,Americas,United States,9949,2016-01-02,Direct,True
+ACC-1120,Westbrook Mart,Retail,Enterprise,EMEA,South Africa,47022,2021-08-31,Direct,True
+ACC-1121,Summit Renewables,Energy & Utilities,Mid-Market,EMEA,Germany,485,2023-11-28,Direct,False
+ACC-1122,Granite Utilities,Energy & Utilities,Mid-Market,EMEA,Germany,1194,2017-08-28,Partner,False
+ACC-1123,Falcon Supermarkets,Retail,SMB,Americas,United States,22,2016-01-19,Direct,False
+ACC-1124,Sahyadri Schools,Education,Enterprise,Americas,Mexico,52147,2017-12-24,Direct,True
+ACC-1125,Monsoon Diagnostics,Healthcare,SMB,Americas,United States,238,2017-02-28,Partner,False
+ACC-1126,Westbrook Revenue Dept,Government,Public Sector,EMEA,United Kingdom,9008,2020-09-22,Direct,False
+ACC-1127,Northgate Hospitals,Healthcare,Mid-Market,Americas,United States,729,2023-12-05,Direct,False
+ACC-1128,Westbrook Institute,Education,Mid-Market,Americas,United States,414,2020-11-08,Partner,False
+ACC-1129,Ironwood Securities,Financial Services,SMB,Americas,United States,155,2015-06-11,Partner,False
+ACC-1130,Silverline Finance,Financial Services,SMB,EMEA,Germany,128,2017-08-14,Partner,False
+ACC-1131,Coastal Components,Manufacturing,Enterprise,Americas,United States,5061,2021-12-03,Direct,True
+ACC-1132,Banyan Software,Technology,Mid-Market,APJC,India,706,2017-10-18,Partner,False
+ACC-1133,Orchid Renewables,Energy & Utilities,Mid-Market,EMEA,United Kingdom,725,2020-09-27,Direct,False
+ACC-1134,Kestrel Medical Group,Healthcare,Public Sector,Americas,United States,12677,2021-12-23,Partner,True
+ACC-1135,Tidewater Schools,Education,Public Sector,EMEA,United Kingdom,7257,2017-10-13,Direct,True
+ACC-1136,Thames Schools,Education,Enterprise,Americas,United States,19303,2021-06-10,Direct,True
+ACC-1137,Kaveri Utilities,Energy & Utilities,SMB,APJC,India,103,2018-07-30,Partner,False
+ACC-1138,Brightpath Academy,Education,Mid-Market,EMEA,Germany,466,2015-07-21,Direct,False
+ACC-1139,Tidewater Municipal Council,Government,Public Sector,APJC,India,2140,2018-04-12,Partner,True
+ACC-1140,Bluefield Diagnostics,Healthcare,Mid-Market,Americas,United States,277,2019-01-26,Direct,True
+ACC-1141,Kaveri Digital,Technology,SMB,EMEA,United Kingdom,145,2014-01-11,Direct,False
+ACC-1142,Apex Retail,Retail,Enterprise,EMEA,United Kingdom,9898,2024-04-05,Partner,True
+ACC-1143,Evergreen Systems,Technology,Mid-Market,APJC,Singapore,685,2020-01-26,Direct,False
+ACC-1144,Ironwood Power,Energy & Utilities,Mid-Market,EMEA,United Kingdom,439,2014-06-02,Partner,True
+ACC-1145,Sahyadri Medical Group,Healthcare,Public Sector,EMEA,Germany,1134,2023-12-23,Direct,True
+ACC-1146,Zenith Labs,Technology,Mid-Market,Americas,United States,967,2023-10-30,Direct,False
+ACC-1147,Monsoon Health,Healthcare,Mid-Market,Americas,United States,427,2014-02-20,Partner,False
+ACC-1148,Orchid Mart,Retail,Mid-Market,EMEA,Germany,289,2015-11-17,Direct,True
+ACC-1149,Granite Insurance,Financial Services,Mid-Market,Americas,Canada,1463,2018-03-08,Direct,False
+ACC-1150,Brightpath Clinics,Healthcare,SMB,Americas,Brazil,51,2019-10-31,Direct,False
+ACC-1151,Pinnacle Medical Group,Healthcare,Enterprise,APJC,India,8370,2022-05-05,Direct,True
+ACC-1152,Tidewater Fabrication,Manufacturing,Enterprise,APJC,India,9845,2018-11-17,Direct,True
+ACC-1153,Apex Cloud,Technology,SMB,Americas,United States,156,2021-01-11,Partner,False
+ACC-1154,Kestrel Bank,Financial Services,SMB,EMEA,Germany,44,2014-02-12,Partner,False
+ACC-1155,Granite Diagnostics,Healthcare,Public Sector,Americas,United States,9701,2021-07-27,Partner,True
+ACC-1156,Tidewater Capital,Financial Services,SMB,EMEA,United Kingdom,214,2024-07-09,Partner,False
+ACC-1157,Quarry Bank,Financial Services,Mid-Market,Americas,United States,1145,2020-01-19,Partner,False
+ACC-1158,Nimbus Medical Group,Healthcare,Mid-Market,EMEA,South Africa,675,2019-03-25,Direct,False
+ACC-1159,Kaveri Energy,Energy & Utilities,Enterprise,EMEA,United Kingdom,26918,2017-06-01,Partner,True
+ACC-1160,Redstone Grid,Energy & Utilities,SMB,APJC,Japan,63,2024-12-20,Partner,False
+ACC-1161,Lotus Clinics,Healthcare,Enterprise,Americas,Canada,9331,2014-05-20,Direct,True
+ACC-1162,Kestrel Stores,Retail,Mid-Market,APJC,India,837,2017-04-18,Partner,False
+ACC-1163,Kestrel Grid,Energy & Utilities,Mid-Market,Americas,United States,519,2015-08-06,Partner,False
+ACC-1164,Meridian Insurance,Financial Services,SMB,Americas,United States,26,2023-12-16,Partner,False
+ACC-1165,Coastal Renewables,Energy & Utilities,Mid-Market,EMEA,South Africa,649,2019-07-19,Direct,True
+ACC-1166,Pinnacle Steelworks,Manufacturing,Mid-Market,Americas,United States,332,2024-08-08,Direct,True
+ACC-1167,Quarry Insurance,Financial Services,SMB,APJC,India,56,2021-08-24,Direct,False
+ACC-1168,Coastal Diagnostics,Healthcare,SMB,APJC,India,81,2020-05-26,Partner,False
+ACC-1169,Tidewater Motors,Manufacturing,SMB,Americas,United States,209,2019-12-13,Direct,False
+ACC-1170,Pinnacle Digital,Technology,SMB,APJC,Japan,21,2016-04-30,Partner,True
+ACC-1171,Unity Systems,Technology,SMB,Americas,United States,96,2020-06-17,Partner,True
+ACC-1172,Kaveri Hospitals,Healthcare,Public Sector,EMEA,France,2996,2021-11-16,Partner,True
+ACC-1173,Northgate Cloud,Technology,Mid-Market,Americas,United States,261,2025-02-04,Direct,False
+ACC-1174,Coastal Software,Technology,Enterprise,APJC,Australia,5525,2020-04-23,Direct,True
+ACC-1175,Unity City Services,Government,Public Sector,Americas,United States,794,2024-10-16,Direct,True
+ACC-1176,Meridian Cloud,Technology,SMB,Americas,Brazil,34,2024-11-09,Partner,False
+ACC-1177,Redstone Academy,Education,Enterprise,Americas,United States,5982,2020-01-03,Direct,True
+ACC-1178,Pinnacle Clinics,Healthcare,Public Sector,APJC,India,2403,2019-01-19,Partner,True
+ACC-1179,Ironwood Renewables,Energy & Utilities,Mid-Market,APJC,Australia,845,2015-08-23,Direct,False
+ACC-1180,Rhine Academy,Education,Mid-Market,EMEA,UAE,250,2017-02-01,Direct,False
+ACC-1181,Aurora Grid,Energy & Utilities,Mid-Market,APJC,India,362,2024-02-08,Direct,False
+ACC-1182,Apex Power,Energy & Utilities,SMB,APJC,Singapore,25,2015-08-04,Direct,False
+ACC-1183,Summit Capital,Financial Services,Mid-Market,EMEA,Germany,886,2018-07-25,Direct,False
+ACC-1184,Apex Municipal Council,Government,Public Sector,Americas,United States,1811,2022-01-11,Direct,True
+ACC-1185,Lotus University,Education,Public Sector,APJC,Singapore,4272,2016-10-07,Direct,True
+ACC-1186,Northgate Components,Manufacturing,SMB,EMEA,Germany,35,2025-03-13,Partner,False
+ACC-1187,Evergreen Grid,Energy & Utilities,Enterprise,Americas,Canada,2700,2021-06-19,Partner,True
+ACC-1188,Westbrook Grid,Energy & Utilities,SMB,Americas,United States,215,2014-04-29,Partner,True
+ACC-1189,Unity Hospitals,Healthcare,Public Sector,EMEA,UAE,763,2016-11-03,Direct,True
+ACC-1190,Brightpath Utilities,Energy & Utilities,SMB,Americas,United States,27,2022-07-06,Partner,False
+ACC-1191,Apex Transit Authority,Government,Public Sector,APJC,India,887,2023-12-03,Direct,True
+ACC-1192,Evergreen Retail,Retail,Enterprise,Americas,United States,56533,2024-08-27,Direct,True
+ACC-1193,Meridian Power,Energy & Utilities,SMB,Americas,United States,95,2023-10-14,Partner,False
+ACC-1194,Cedarline Stores,Retail,SMB,APJC,India,93,2014-11-10,Partner,False
+ACC-1195,Unity University,Education,Enterprise,Americas,United States,57516,2022-05-22,Direct,True
+ACC-1196,Meridian Bank,Financial Services,SMB,Americas,United States,25,2015-04-08,Partner,True
+ACC-1197,Bluefield Software,Technology,Mid-Market,EMEA,United Kingdom,2357,2014-11-18,Partner,False
+ACC-1198,Silverline Revenue Dept,Government,Public Sector,APJC,India,1110,2021-12-14,Direct,True
+ACC-1199,Kaveri Schools,Education,Mid-Market,Americas,Canada,1049,2019-07-01,Partner,False
+ACC-1200,Aurora Supermarkets,Retail,Mid-Market,Americas,Canada,657,2021-06-13,Partner,False
+ACC-1201,Lakeshore Insurance,Financial Services,Mid-Market,APJC,Australia,605,2023-10-15,Partner,False
+ACC-1202,Rhine Components,Manufacturing,SMB,APJC,India,210,2014-10-16,Partner,True
+ACC-1203,Saffron Clinics,Healthcare,Public Sector,EMEA,South Africa,896,2020-01-24,Direct,True
+ACC-1204,Kestrel University,Education,SMB,Americas,United States,248,2023-08-04,Direct,False
+ACC-1205,Falcon Digital,Technology,SMB,Americas,United States,52,2019-01-23,Direct,False
+ACC-1206,Nimbus Power,Energy & Utilities,SMB,Americas,United States,102,2020-01-07,Partner,False
+ACC-1207,Alpine Public Works,Government,Public Sector,Americas,United States,22050,2019-09-21,Direct,True
+ACC-1208,Cedarline Labs,Technology,SMB,EMEA,United Kingdom,23,2024-06-05,Partner,True
+ACC-1209,Granite Systems,Technology,Enterprise,Americas,United States,46955,2014-07-29,Partner,True
+ACC-1210,Brightpath Insurance,Financial Services,Enterprise,EMEA,South Africa,15192,2024-02-03,Partner,True
+ACC-1211,Redstone Systems,Technology,Enterprise,EMEA,United Kingdom,23450,2023-05-21,Direct,True
+ACC-1212,Northgate Public Works,Government,Public Sector,EMEA,United Kingdom,896,2023-05-04,Partner,True
+ACC-1213,Westbrook University,Education,Enterprise,Americas,Mexico,13618,2018-09-27,Direct,True
+ACC-1214,Pinnacle Public Works,Government,Public Sector,APJC,Japan,6970,2019-12-06,Direct,True
+ACC-1215,Meridian Academy,Education,SMB,EMEA,United Kingdom,63,2018-03-29,Direct,False
+ACC-1216,Evergreen Power,Energy & Utilities,Enterprise,EMEA,South Africa,4091,2016-11-22,Direct,True
+ACC-1217,Brightpath Motors,Manufacturing,Mid-Market,Americas,Brazil,438,2024-01-24,Direct,False
+ACC-1218,Aurora Mart,Retail,Mid-Market,Americas,United States,1787,2019-10-26,Partner,True
+ACC-1219,Redstone Schools,Education,Public Sector,APJC,Japan,572,2022-04-25,Direct,True
+ACC-1220,Kaveri Public Works,Government,Public Sector,Americas,United States,8003,2015-02-28,Partner,True
+ACC-1221,Westbrook Utilities,Energy & Utilities,Enterprise,Americas,United States,59883,2023-01-25,Partner,False
+ACC-1222,Cedarline Mart,Retail,Mid-Market,EMEA,France,254,2021-07-28,Direct,False
+ACC-1223,Falcon Schools,Education,Mid-Market,EMEA,United Kingdom,362,2025-06-19,Partner,False
+ACC-1224,Alpine Health,Healthcare,Mid-Market,APJC,Australia,1180,2015-07-17,Partner,False
+ACC-1225,Sahyadri Grid,Energy & Utilities,Mid-Market,Americas,Brazil,287,2020-03-17,Direct,False
+ACC-1226,Silverline Fabrication,Manufacturing,Mid-Market,APJC,India,972,2019-11-16,Partner,True
+ACC-1227,Monsoon Insurance,Financial Services,SMB,Americas,United States,112,2020-03-10,Partner,False
+ACC-1228,Vantage Motors,Manufacturing,SMB,EMEA,United Kingdom,88,2014-08-17,Partner,False
+ACC-1229,Bluefield Institute,Education,Enterprise,EMEA,UAE,7979,2019-06-10,Direct,False
+ACC-1230,Saffron Finance,Financial Services,Mid-Market,Americas,United States,1245,2017-06-11,Direct,False
+ACC-1231,Pinnacle Revenue Dept,Government,Public Sector,Americas,United States,5112,2021-02-04,Partner,True
+ACC-1232,Brightpath Systems,Technology,Mid-Market,Americas,United States,403,2016-09-01,Direct,False
+ACC-1233,Vantage Medical Group,Healthcare,SMB,APJC,India,82,2019-01-01,Partner,False
+ACC-1234,Cedarline Capital,Financial Services,SMB,EMEA,France,185,2021-02-15,Partner,False
+ACC-1235,Vantage Components,Manufacturing,SMB,APJC,Australia,107,2014-09-26,Partner,True
+ACC-1236,Unity Academy,Education,Public Sector,APJC,Japan,3166,2023-01-16,Partner,False
+ACC-1237,Rhine Power,Energy & Utilities,SMB,EMEA,UAE,45,2022-03-24,Partner,False
+ACC-1238,Silverline Outfitters,Retail,Mid-Market,APJC,Singapore,304,2014-08-29,Partner,True
+ACC-1239,Quarry Institute,Education,Public Sector,Americas,United States,1301,2014-09-29,Direct,True
+ACC-1240,Granite College,Education,Public Sector,Americas,United States,522,2023-10-10,Direct,False
+ACC-1241,Coastal Hospitals,Healthcare,SMB,APJC,India,241,2017-04-04,Direct,False
+ACC-1242,Silverline Bank,Financial Services,SMB,APJC,Australia,35,2023-11-23,Partner,True
+ACC-1243,Apex Clinics,Healthcare,SMB,Americas,United States,156,2019-09-27,Partner,True
+ACC-1244,Kaveri Retail,Retail,SMB,EMEA,Germany,30,2017-12-07,Partner,False
+ACC-1245,Apex Labs,Technology,SMB,EMEA,United Kingdom,40,2017-02-22,Partner,True
+ACC-1246,Kestrel Diagnostics,Healthcare,Mid-Market,APJC,Singapore,654,2021-07-29,Partner,False
+ACC-1247,Westbrook Transit Authority,Government,Public Sector,EMEA,Germany,1778,2015-04-06,Direct,True
+ACC-1248,Meridian College,Education,Mid-Market,Americas,United States,1571,2018-08-18,Direct,False
+ACC-1249,Apex Medical Group,Healthcare,Mid-Market,Americas,United States,2267,2017-12-22,Partner,False
+ACC-1250,Harborview Grid,Energy & Utilities,SMB,Americas,Mexico,182,2015-10-10,Partner,False
+ACC-1251,Coastal Mart,Retail,Enterprise,EMEA,United Kingdom,4072,2018-01-21,Partner,True
+ACC-1252,Granite Capital,Financial Services,Mid-Market,APJC,India,1494,2020-01-29,Direct,False
+ACC-1253,Monsoon Power,Energy & Utilities,Enterprise,EMEA,UAE,4000,2021-10-15,Direct,True
+ACC-1254,Harborview Health,Healthcare,Public Sector,Americas,Brazil,17814,2014-12-29,Partner,True
+ACC-1255,Lotus Industries,Manufacturing,SMB,Americas,United States,73,2024-01-11,Direct,False
+ACC-1256,Zenith Renewables,Energy & Utilities,SMB,EMEA,Germany,46,2024-02-05,Partner,True
+ACC-1257,Ironwood Energy,Energy & Utilities,SMB,APJC,Australia,29,2021-12-14,Partner,True
+ACC-1258,Granite Cloud,Technology,Mid-Market,Americas,Brazil,256,2024-08-16,Partner,False
+ACC-1259,Granite Municipal Council,Government,Public Sector,Americas,United States,1318,2018-12-02,Partner,True
+ACC-1260,Lotus College,Education,Mid-Market,EMEA,Germany,2050,2023-06-12,Partner,True
+ACC-1261,Pinnacle Outfitters,Retail,Enterprise,Americas,Canada,31501,2022-05-12,Partner,True
+ACC-1262,Vantage Institute,Education,Mid-Market,APJC,Australia,2332,2020-06-19,Direct,True
+ACC-1263,Meridian Institute,Education,SMB,Americas,Canada,25,2016-01-24,Partner,True
+ACC-1264,Zenith Institute,Education,SMB,Americas,United States,89,2020-05-29,Partner,False
+ACC-1265,Northgate Supermarkets,Retail,Enterprise,APJC,India,5660,2024-05-11,Partner,True
+ACC-1266,Lotus Institute,Education,Enterprise,Americas,Brazil,14038,2025-04-26,Partner,True
+ACC-1267,Redstone Stores,Retail,Mid-Market,Americas,Brazil,522,2019-02-24,Direct,False
+ACC-1268,Unity Industries,Manufacturing,SMB,Americas,Canada,40,2016-11-06,Partner,False
+ACC-1269,Monsoon Motors,Manufacturing,Enterprise,Americas,United States,15487,2022-08-05,Partner,True
+ACC-1270,Monsoon Renewables,Energy & Utilities,SMB,Americas,United States,31,2014-11-15,Direct,True
+ACC-1271,Thames Hospitals,Healthcare,Public Sector,Americas,Canada,3133,2015-09-27,Partner,True
+ACC-1272,Orchid Academy,Education,SMB,Americas,United States,103,2020-06-17,Partner,False
+ACC-1273,Bluefield Finance,Financial Services,SMB,Americas,Mexico,27,2025-05-19,Partner,False
+ACC-1274,Saffron Software,Technology,Mid-Market,EMEA,Germany,2130,2017-10-12,Direct,True
+ACC-1275,Westbrook Bank,Financial Services,Mid-Market,EMEA,France,801,2019-02-05,Direct,False
+ACC-1276,Redstone Health,Healthcare,Mid-Market,Americas,Brazil,1649,2017-09-15,Direct,False
+ACC-1277,Orchid Diagnostics,Healthcare,Mid-Market,Americas,United States,1126,2019-01-24,Direct,False
+ACC-1278,Sahyadri Revenue Dept,Government,Public Sector,EMEA,Germany,8039,2014-01-30,Partner,True
+ACC-1279,Kestrel Digital,Technology,Mid-Market,APJC,Japan,1300,2020-11-01,Partner,False
+ACC-1280,Northgate Stores,Retail,Mid-Market,APJC,Japan,1875,2020-11-08,Direct,False
+ACC-1281,Northgate Diagnostics,Healthcare,Mid-Market,Americas,United States,1026,2017-08-17,Direct,True
+ACC-1282,Silverline Supermarkets,Retail,SMB,Americas,United States,40,2017-01-13,Partner,True
+ACC-1283,Summit Steelworks,Manufacturing,Mid-Market,Americas,Mexico,314,2022-10-03,Direct,False
+ACC-1284,Granite Mart,Retail,SMB,Americas,United States,92,2016-02-28,Direct,False
+ACC-1285,Bluefield Mart,Retail,Mid-Market,EMEA,United Kingdom,291,2014-07-17,Partner,True
+ACC-1286,Lotus Diagnostics,Healthcare,SMB,Americas,United States,36,2014-06-19,Partner,False
+ACC-1287,Harborview Transit Authority,Government,Public Sector,Americas,United States,634,2024-02-19,Partner,True
+ACC-1288,Quarry Finance,Financial Services,Mid-Market,Americas,United States,884,2018-03-10,Direct,False
+ACC-1289,Rhine College,Education,Public Sector,EMEA,United Kingdom,936,2015-03-04,Direct,False
+ACC-1290,Sahyadri Mart,Retail,Mid-Market,Americas,United States,1019,2024-02-07,Direct,False
+ACC-1291,Unity Power,Energy & Utilities,SMB,APJC,India,147,2015-09-16,Partner,False
+ACC-1292,Harborview Medical Group,Healthcare,Enterprise,Americas,Mexico,34065,2017-11-14,Direct,True
+ACC-1293,Meridian Steelworks,Manufacturing,Mid-Market,APJC,India,509,2014-03-28,Direct,True
+ACC-1294,Cedarline Power,Energy & Utilities,Enterprise,Americas,United States,14309,2021-10-21,Partner,True
+ACC-1295,Nimbus Mart,Retail,Mid-Market,APJC,Australia,914,2022-01-14,Direct,False
+ACC-1296,Lakeshore Finance,Financial Services,Mid-Market,APJC,Singapore,742,2022-09-11,Direct,True
+ACC-1297,Orchid Institute,Education,Enterprise,APJC,India,20050,2017-01-09,Partner,True
+ACC-1298,Northgate Health,Healthcare,Mid-Market,APJC,India,405,2017-10-09,Direct,False
+ACC-1299,Northgate Renewables,Energy & Utilities,SMB,APJC,India,237,2024-10-13,Partner,True
+ACC-1300,Coastal Clinics,Healthcare,Enterprise,EMEA,Germany,3414,2023-06-12,Partner,True
+ACC-1301,Kaveri Mart,Retail,Enterprise,APJC,Japan,34869,2014-06-05,Direct,True
+ACC-1302,Kestrel Public Works,Government,Public Sector,Americas,United States,5108,2021-12-14,Direct,False
+ACC-1303,Falcon Bank,Financial Services,Mid-Market,EMEA,United Kingdom,439,2023-05-05,Direct,False
+ACC-1304,Silverline Stores,Retail,Mid-Market,EMEA,Germany,1391,2020-06-05,Partner,False
+ACC-1305,Meridian Motors,Manufacturing,Enterprise,APJC,Singapore,3269,2021-05-10,Direct,True
+ACC-1306,Quarry College,Education,Mid-Market,EMEA,France,1487,2014-01-05,Direct,False
+ACC-1307,Kaveri Software,Technology,Enterprise,Americas,United States,16302,2014-05-07,Direct,True
+ACC-1308,Pinnacle Energy,Energy & Utilities,Mid-Market,EMEA,United Kingdom,322,2014-05-28,Partner,False
+ACC-1309,Rhine Health,Healthcare,SMB,Americas,United States,24,2015-10-30,Partner,False
+ACC-1310,Lotus Bank,Financial Services,Enterprise,Americas,United States,27180,2025-05-22,Direct,True
+ACC-1311,Nimbus Outfitters,Retail,SMB,EMEA,UAE,41,2021-04-17,Partner,False
+ACC-1312,Ironwood Institute,Education,SMB,Americas,Brazil,189,2022-12-29,Partner,True
+ACC-1313,Orchid Energy,Energy & Utilities,Mid-Market,Americas,Brazil,1445,2017-05-25,Partner,False
+ACC-1314,Monsoon Fabrication,Manufacturing,Enterprise,Americas,Mexico,22992,2024-10-10,Direct,False
+ACC-1315,Evergreen Public Works,Government,Public Sector,Americas,Mexico,1487,2016-04-15,Direct,True
+ACC-1316,Oakridge Securities,Financial Services,SMB,Americas,Mexico,119,2024-05-15,Partner,False
+ACC-1317,Brightpath Securities,Financial Services,SMB,Americas,United States,219,2014-05-10,Direct,False
+ACC-1318,Orchid Revenue Dept,Government,Public Sector,EMEA,United Kingdom,715,2014-03-27,Direct,False
+ACC-1319,Evergreen Energy,Energy & Utilities,SMB,Americas,United States,45,2014-11-28,Partner,True
+ACC-1320,Bluefield Components,Manufacturing,SMB,APJC,Japan,36,2023-02-07,Partner,False
+ACC-1321,Ironwood Cloud,Technology,SMB,APJC,India,53,2016-12-16,Partner,False
+ACC-1322,Evergreen Institute,Education,Mid-Market,EMEA,UAE,1381,2019-03-09,Partner,False
+ACC-1323,Coastal Municipal Council,Government,Public Sector,Americas,United States,3196,2019-06-02,Direct,True
+ACC-1324,Cedarline Academy,Education,Enterprise,EMEA,Germany,15334,2023-01-28,Partner,True
+ACC-1325,Oakridge Fabrication,Manufacturing,Enterprise,APJC,India,6784,2018-01-03,Direct,True
+ACC-1326,Vantage Software,Technology,SMB,EMEA,United Kingdom,28,2014-01-29,Partner,False
+ACC-1327,Evergreen Insurance,Financial Services,Mid-Market,APJC,India,462,2018-06-11,Partner,False
+ACC-1328,Alpine Stores,Retail,Mid-Market,EMEA,UAE,1809,2017-04-24,Direct,False
+ACC-1329,Oakridge University,Education,SMB,EMEA,France,91,2022-05-27,Partner,False
+ACC-1330,Redstone College,Education,SMB,Americas,Canada,51,2022-08-21,Partner,False
+ACC-1331,Coastal Health,Healthcare,SMB,EMEA,United Kingdom,147,2015-01-22,Direct,True
+ACC-1332,Harborview Clinics,Healthcare,SMB,Americas,United States,23,2023-02-12,Partner,False
+ACC-1333,Cedarline Retail,Retail,Mid-Market,EMEA,Germany,448,2014-10-23,Direct,True
+ACC-1334,Brightpath Steelworks,Manufacturing,Enterprise,APJC,Australia,5194,2021-02-14,Direct,False
+ACC-1335,Zenith Software,Technology,SMB,Americas,Canada,240,2018-06-23,Partner,False
+ACC-1336,Zenith Industries,Manufacturing,Mid-Market,EMEA,United Kingdom,1270,2017-06-18,Direct,False
+ACC-1337,Brightpath Stores,Retail,Enterprise,Americas,Mexico,17807,2019-07-22,Direct,True
+ACC-1338,Banyan University,Education,Enterprise,EMEA,United Kingdom,2539,2017-07-26,Direct,True
+ACC-1339,Coastal Industries,Manufacturing,Enterprise,Americas,Brazil,4490,2023-02-15,Partner,True
+ACC-1340,Summit Utilities,Energy & Utilities,Mid-Market,APJC,India,1080,2025-02-10,Direct,False
+ACC-1341,Aurora Clinics,Healthcare,Enterprise,Americas,United States,8356,2023-05-18,Partner,True
+ACC-1342,Ironwood Fabrication,Manufacturing,SMB,APJC,Australia,206,2019-01-18,Partner,True
+ACC-1343,Apex Academy,Education,Mid-Market,APJC,India,1454,2019-10-14,Direct,False
+ACC-1344,Kestrel Retail,Retail,SMB,EMEA,Germany,61,2019-02-21,Direct,False
+ACC-1345,Silverline Academy,Education,Mid-Market,APJC,Japan,1404,2023-02-14,Partner,False
+ACC-1346,Evergreen Digital,Technology,Mid-Market,APJC,India,2362,2020-05-07,Partner,False
+ACC-1347,Cedarline Supermarkets,Retail,SMB,APJC,Australia,64,2019-05-20,Partner,False
+ACC-1348,Saffron Cloud,Technology,Enterprise,Americas,Brazil,19264,2018-09-16,Partner,True
+ACC-1349,Westbrook Clinics,Healthcare,SMB,EMEA,UAE,203,2018-04-24,Partner,False
+ACC-1350,Falcon Retail,Retail,SMB,Americas,United States,37,2020-05-09,Partner,True
+ACC-1351,Monsoon Capital,Financial Services,SMB,EMEA,Germany,187,2021-12-02,Partner,False
+ACC-1352,Coastal University,Education,Mid-Market,Americas,United States,312,2018-12-20,Partner,False
+ACC-1353,Monsoon Finance,Financial Services,SMB,EMEA,United Kingdom,102,2023-04-10,Partner,False
+ACC-1354,Falcon Academy,Education,Mid-Market,EMEA,United Kingdom,1516,2023-07-03,Direct,True
+ACC-1355,Evergreen Software,Technology,SMB,EMEA,South Africa,94,2018-12-07,Partner,False
+ACC-1356,Brightpath Grid,Energy & Utilities,Enterprise,EMEA,South Africa,12074,2024-06-13,Partner,True
+ACC-1357,Lakeshore Transit Authority,Government,Public Sector,APJC,Australia,5595,2015-12-28,Partner,True
+ACC-1358,Rhine Steelworks,Manufacturing,Mid-Market,APJC,Japan,354,2024-09-17,Partner,True
+ACC-1359,Redstone Fabrication,Manufacturing,Mid-Market,EMEA,Germany,410,2017-05-19,Direct,True
+ACC-1360,Nimbus Utilities,Energy & Utilities,Enterprise,EMEA,Germany,5894,2020-06-26,Partner,True
+ACC-1361,Westbrook Municipal Council,Government,Public Sector,APJC,Japan,5182,2017-04-05,Partner,True
+ACC-1362,Cedarline Components,Manufacturing,Mid-Market,Americas,United States,691,2019-01-31,Direct,False
+ACC-1363,Kaveri Municipal Council,Government,Public Sector,Americas,United States,1301,2017-11-28,Partner,True
+ACC-1364,Redstone Municipal Council,Government,Public Sector,Americas,United States,15806,2022-02-08,Partner,True
+ACC-1365,Kestrel Hospitals,Healthcare,Enterprise,EMEA,South Africa,8204,2014-12-07,Direct,False
+ACC-1366,Meridian Fabrication,Manufacturing,Mid-Market,Americas,United States,698,2023-08-21,Direct,True
+ACC-1367,Alpine Software,Technology,SMB,APJC,Singapore,56,2024-05-22,Partner,True
+ACC-1368,Redstone Finance,Financial Services,SMB,EMEA,United Kingdom,31,2020-06-21,Partner,False
+ACC-1369,Lakeshore Clinics,Healthcare,Mid-Market,Americas,United States,1347,2020-04-16,Partner,False
+ACC-1370,Brightpath Fabrication,Manufacturing,Mid-Market,APJC,India,702,2022-01-17,Partner,False
+ACC-1371,Thames University,Education,Mid-Market,APJC,India,259,2016-04-15,Direct,False
+ACC-1372,Banyan Stores,Retail,Mid-Market,Americas,United States,2301,2022-08-14,Direct,False
+ACC-1373,Alpine Energy,Energy & Utilities,Mid-Market,Americas,United States,1635,2016-07-06,Direct,False
+ACC-1374,Redstone Medical Group,Healthcare,Enterprise,Americas,Brazil,24923,2021-10-10,Direct,True
+ACC-1375,Redstone Securities,Financial Services,SMB,Americas,United States,179,2017-07-06,Partner,True
+ACC-1376,Orchid Insurance,Financial Services,SMB,Americas,United States,197,2022-07-30,Partner,False
+ACC-1377,Lakeshore Securities,Financial Services,Enterprise,APJC,Japan,7307,2023-02-03,Direct,True
+ACC-1378,Summit Outfitters,Retail,Enterprise,Americas,United States,17425,2016-05-25,Partner,True
+ACC-1379,Aurora Public Works,Government,Public Sector,Americas,United States,5411,2021-02-04,Direct,True
+ACC-1380,Brightpath Diagnostics,Healthcare,Public Sector,EMEA,United Kingdom,1422,2019-09-24,Partner,True
+ACC-1381,Harborview Academy,Education,Public Sector,EMEA,South Africa,1191,2017-05-19,Direct,True
+ACC-1382,Sahyadri Systems,Technology,SMB,APJC,Australia,26,2020-10-05,Partner,False
+ACC-1383,Ironwood College,Education,Mid-Market,APJC,Australia,1140,2025-05-30,Partner,True
+ACC-1384,Lotus Energy,Energy & Utilities,SMB,EMEA,Germany,143,2014-01-11,Partner,False
+ACC-1385,Coastal Labs,Technology,Mid-Market,Americas,United States,1441,2024-12-30,Partner,False
+ACC-1386,Lotus City Services,Government,Public Sector,APJC,Singapore,1723,2023-11-03,Direct,True
+ACC-1387,Vantage Power,Energy & Utilities,SMB,EMEA,Germany,33,2020-02-01,Partner,False
+ACC-1388,Bluefield Steelworks,Manufacturing,Mid-Market,APJC,India,710,2021-01-04,Partner,False
+ACC-1389,Banyan Digital,Technology,SMB,Americas,United States,79,2018-03-30,Partner,False
+ACC-1390,Vantage Hospitals,Healthcare,SMB,APJC,Australia,203,2015-06-27,Partner,False
+ACC-1391,Summit Software,Technology,SMB,EMEA,France,182,2020-07-27,Partner,False
+ACC-1392,Orchid Utilities,Energy & Utilities,SMB,Americas,Canada,202,2023-05-21,Partner,False
+ACC-1393,Vantage Academy,Education,Public Sector,EMEA,UAE,13916,2016-08-28,Partner,False
+ACC-1394,Coastal Fabrication,Manufacturing,Mid-Market,EMEA,United Kingdom,2304,2022-03-30,Direct,False
+ACC-1395,Oakridge Medical Group,Healthcare,Enterprise,Americas,Mexico,10975,2022-08-07,Partner,True
+ACC-1396,Silverline Diagnostics,Healthcare,Enterprise,EMEA,Germany,2907,2022-09-19,Partner,False
+ACC-1397,Harborview Utilities,Energy & Utilities,SMB,APJC,Japan,24,2017-11-28,Partner,False
+ACC-1398,Nimbus Renewables,Energy & Utilities,SMB,Americas,United States,53,2018-07-04,Partner,False
+ACC-1399,Harborview Stores,Retail,Enterprise,EMEA,South Africa,5670,2018-10-14,Direct,True
+ACC-1400,Redstone Renewables,Energy & Utilities,SMB,Americas,United States,30,2023-10-26,Partner,False
+ACC-1401,Tidewater City Services,Government,Public Sector,Americas,United States,20817,2024-05-08,Direct,True
+ACC-1402,Orchid Hospitals,Healthcare,SMB,APJC,Japan,32,2018-10-05,Partner,False
+ACC-1403,Orchid Software,Technology,Enterprise,APJC,India,52733,2025-02-23,Direct,True
+ACC-1404,Silverline College,Education,Enterprise,Americas,United States,28058,2020-07-22,Direct,True
+ACC-1405,Ironwood Retail,Retail,SMB,APJC,Japan,100,2018-06-05,Partner,False
+ACC-1406,Granite Outfitters,Retail,SMB,APJC,India,110,2014-01-03,Partner,True
+ACC-1407,Coastal Academy,Education,Public Sector,Americas,Mexico,1828,2021-01-09,Direct,True
+ACC-1408,Orchid Systems,Technology,SMB,APJC,India,102,2021-05-31,Direct,False
+ACC-1409,Lotus Supermarkets,Retail,Mid-Market,Americas,Canada,384,2025-02-17,Direct,False
+ACC-1410,Saffron Industries,Manufacturing,Mid-Market,APJC,Japan,2165,2022-04-03,Partner,False
+ACC-1411,Quarry Motors,Manufacturing,SMB,EMEA,France,42,2014-05-05,Partner,False
+ACC-1412,Aurora Finance,Financial Services,Enterprise,EMEA,France,5625,2020-07-08,Direct,True
+ACC-1413,Alpine Retail,Retail,Enterprise,Americas,United States,23960,2022-07-16,Direct,True
+ACC-1414,Northgate University,Education,Mid-Market,APJC,Singapore,1133,2019-09-16,Direct,True
+ACC-1415,Lotus Digital,Technology,Enterprise,Americas,United States,10491,2018-12-08,Direct,False
+ACC-1416,Silverline Insurance,Financial Services,SMB,Americas,United States,98,2023-04-24,Direct,False
+ACC-1417,Silverline Digital,Technology,SMB,Americas,United States,29,2021-01-10,Partner,True
+ACC-1418,Cedarline University,Education,Mid-Market,APJC,Australia,1178,2021-10-31,Direct,True
+ACC-1419,Meridian Hospitals,Healthcare,Public Sector,Americas,United States,1441,2019-05-03,Partner,False
+ACC-1420,Northgate Medical Group,Healthcare,SMB,APJC,Japan,39,2017-03-13,Partner,True
+ACC-1421,Tidewater Clinics,Healthcare,SMB,EMEA,South Africa,30,2019-12-20,Partner,True
+ACC-1422,Saffron Renewables,Energy & Utilities,Mid-Market,Americas,Canada,537,2025-01-09,Direct,False
+ACC-1423,Apex Grid,Energy & Utilities,Enterprise,Americas,Mexico,7163,2020-12-05,Direct,True
+ACC-1424,Granite Software,Technology,SMB,Americas,United States,62,2022-02-17,Partner,False
+ACC-1425,Coastal Retail,Retail,Mid-Market,EMEA,France,387,2015-06-06,Direct,False
+ACC-1426,Tidewater Retail,Retail,Enterprise,APJC,India,4616,2025-05-10,Partner,True
+ACC-1427,Zenith Diagnostics,Healthcare,Mid-Market,Americas,Mexico,870,2016-10-24,Direct,False
+ACC-1428,Granite Labs,Technology,SMB,APJC,India,27,2025-03-01,Partner,False
+ACC-1429,Ironwood Components,Manufacturing,SMB,Americas,Canada,113,2019-02-15,Partner,False
+ACC-1430,Oakridge Insurance,Financial Services,Mid-Market,APJC,Japan,2197,2024-07-24,Partner,False
+ACC-1431,Unity Steelworks,Manufacturing,Mid-Market,APJC,Japan,667,2024-04-01,Partner,False
+ACC-1432,Zenith Outfitters,Retail,Enterprise,APJC,Australia,43818,2022-09-07,Partner,True
+ACC-1433,Silverline Clinics,Healthcare,Mid-Market,EMEA,Germany,313,2024-07-14,Partner,True
+ACC-1434,Nimbus Securities,Financial Services,Enterprise,APJC,Singapore,2865,2021-01-02,Partner,True
+ACC-1435,Bluefield Schools,Education,Public Sector,Americas,United States,8405,2023-10-04,Partner,True
+ACC-1436,Aurora Renewables,Energy & Utilities,Mid-Market,Americas,United States,1441,2015-12-24,Partner,False
+ACC-1437,Saffron Outfitters,Retail,Mid-Market,Americas,United States,1741,2014-10-23,Partner,True
+ACC-1438,Oakridge Revenue Dept,Government,Public Sector,EMEA,Germany,624,2020-03-30,Direct,True
+ACC-1439,Saffron Utilities,Energy & Utilities,SMB,EMEA,Germany,142,2023-04-23,Partner,False
+ACC-1440,Pinnacle Renewables,Energy & Utilities,Enterprise,EMEA,United Kingdom,8272,2022-10-19,Direct,True
+ACC-1441,Thames Medical Group,Healthcare,Enterprise,APJC,India,6555,2020-01-26,Partner,True
+ACC-1442,Vantage Utilities,Energy & Utilities,SMB,Americas,United States,30,2019-12-27,Partner,True
+ACC-1443,Quarry Power,Energy & Utilities,Mid-Market,EMEA,France,2477,2021-01-04,Partner,False
+ACC-1444,Aurora Energy,Energy & Utilities,SMB,Americas,United States,23,2023-12-24,Partner,False
+ACC-1445,Bluefield Clinics,Healthcare,SMB,Americas,United States,161,2023-09-04,Partner,False
+ACC-1446,Kaveri Finance,Financial Services,Mid-Market,EMEA,Germany,1090,2015-04-06,Direct,False
+ACC-1447,Westbrook Schools,Education,SMB,APJC,India,128,2020-11-05,Partner,True
+ACC-1448,Vantage Renewables,Energy & Utilities,Enterprise,EMEA,UAE,24002,2018-05-19,Direct,True
+ACC-1449,Brightpath Revenue Dept,Government,Public Sector,Americas,Brazil,14368,2023-03-10,Partner,True
+ACC-1450,Sahyadri Outfitters,Retail,Enterprise,EMEA,United Kingdom,4483,2019-10-26,Partner,True
+ACC-1451,Granite Finance,Financial Services,SMB,Americas,United States,20,2025-05-24,Direct,False
+ACC-1452,Granite Clinics,Healthcare,SMB,APJC,India,90,2018-12-20,Partner,True
+ACC-1453,Evergreen College,Education,SMB,EMEA,United Kingdom,48,2021-10-21,Direct,False
+ACC-1454,Harborview Outfitters,Retail,SMB,Americas,United States,27,2015-04-01,Direct,False
+ACC-1455,Brightpath Medical Group,Healthcare,Public Sector,Americas,United States,1035,2024-09-19,Partner,True
+ACC-1456,Kaveri Health,Healthcare,Mid-Market,Americas,United States,536,2015-10-07,Partner,False
+ACC-1457,Unity Components,Manufacturing,SMB,APJC,Singapore,23,2018-05-08,Direct,True
+ACC-1458,Cedarline Health,Healthcare,Enterprise,EMEA,United Kingdom,2995,2023-08-18,Partner,True
+ACC-1459,Northgate Schools,Education,Mid-Market,APJC,Japan,2060,2025-02-13,Direct,False
+ACC-1460,Cedarline Finance,Financial Services,SMB,EMEA,France,43,2019-07-27,Partner,False
+ACC-1461,Alpine Power,Energy & Utilities,SMB,EMEA,South Africa,239,2019-07-28,Partner,False
+ACC-1462,Oakridge Components,Manufacturing,Mid-Market,Americas,United States,2303,2014-07-24,Partner,False
+ACC-1463,Tidewater College,Education,Enterprise,APJC,India,3932,2025-04-02,Direct,False
+ACC-1464,Falcon Mart,Retail,SMB,Americas,United States,121,2014-03-11,Partner,False
+ACC-1465,Bluefield University,Education,Public Sector,EMEA,Germany,5244,2014-04-20,Partner,True
+ACC-1466,Bluefield Energy,Energy & Utilities,Enterprise,EMEA,South Africa,22448,2019-06-11,Direct,True
+ACC-1467,Summit Mart,Retail,Enterprise,EMEA,Germany,3393,2014-01-16,Direct,True
+ACC-1468,Kestrel Academy,Education,SMB,APJC,Australia,32,2015-11-22,Direct,False
+ACC-1469,Coastal College,Education,SMB,Americas,United States,24,2021-03-20,Direct,True
+ACC-1470,Vantage Supermarkets,Retail,Enterprise,EMEA,Germany,17051,2022-02-08,Partner,True
+ACC-1471,Nimbus Capital,Financial Services,SMB,Americas,Brazil,241,2017-06-05,Partner,True
+ACC-1472,Bluefield Stores,Retail,Mid-Market,EMEA,France,1174,2023-02-21,Direct,False
+ACC-1473,Alpine Finance,Financial Services,Enterprise,Americas,United States,23929,2020-12-26,Partner,True
+ACC-1474,Quarry Mart,Retail,SMB,Americas,Mexico,240,2016-08-16,Partner,True
+ACC-1475,Brightpath College,Education,Enterprise,Americas,Brazil,21564,2022-03-10,Direct,True
+ACC-1476,Saffron City Services,Government,Public Sector,Americas,United States,585,2020-10-21,Partner,True
+ACC-1477,Ironwood Insurance,Financial Services,Enterprise,Americas,United States,39317,2023-05-03,Partner,True
+ACC-1478,Nimbus Cloud,Technology,Mid-Market,EMEA,Germany,578,2015-10-11,Direct,False
+ACC-1479,Lakeshore Medical Group,Healthcare,Public Sector,EMEA,France,508,2016-08-27,Partner,True
+ACC-1480,Falcon Insurance,Financial Services,Mid-Market,Americas,United States,803,2017-06-28,Partner,False
+ACC-1481,Oakridge Schools,Education,Enterprise,Americas,United States,49115,2017-12-04,Partner,True
+ACC-1482,Westbrook Cloud,Technology,Enterprise,Americas,Brazil,5663,2024-03-20,Direct,True
+ACC-1483,Rhine Systems,Technology,Enterprise,EMEA,South Africa,11921,2022-06-03,Partner,True
+ACC-1484,Summit Cloud,Technology,SMB,Americas,Brazil,31,2020-04-03,Partner,True
+ACC-1485,Sahyadri Energy,Energy & Utilities,SMB,Americas,Mexico,23,2020-03-18,Partner,False
+ACC-1486,Saffron Schools,Education,SMB,Americas,Canada,24,2024-03-07,Direct,False
+ACC-1487,Oakridge Clinics,Healthcare,Mid-Market,EMEA,UAE,1333,2019-02-19,Direct,True
+ACC-1488,Unity Renewables,Energy & Utilities,Mid-Market,Americas,Canada,1828,2016-08-03,Direct,False
+ACC-1489,Thames Securities,Financial Services,Mid-Market,EMEA,Germany,347,2015-07-29,Partner,False
+ACC-1490,Banyan Health,Healthcare,Mid-Market,EMEA,Germany,485,2017-10-17,Direct,True
+ACC-1491,Harborview Software,Technology,Enterprise,EMEA,United Kingdom,4646,2021-07-05,Direct,True
+ACC-1492,Thames College,Education,Public Sector,EMEA,France,555,2019-06-01,Direct,True
+ACC-1493,Kestrel Health,Healthcare,SMB,EMEA,United Kingdom,80,2018-11-06,Direct,True
+ACC-1494,Alpine Digital,Technology,Enterprise,Americas,United States,23119,2019-07-09,Partner,True
+ACC-1495,Banyan Power,Energy & Utilities,Enterprise,APJC,Japan,19595,2025-03-16,Direct,False
+ACC-1496,Rhine Software,Technology,Mid-Market,EMEA,Germany,610,2025-06-20,Partner,True
+ACC-1497,Northgate Steelworks,Manufacturing,SMB,Americas,United States,81,2015-11-09,Partner,False
+ACC-1498,Cedarline Institute,Education,Enterprise,EMEA,UAE,3371,2015-04-26,Partner,True
+ACC-1499,Monsoon Municipal Council,Government,Public Sector,Americas,Brazil,914,2016-10-22,Direct,True
+ACC-1500,Northgate Systems,Technology,Enterprise,EMEA,United Kingdom,48307,2023-10-17,Direct,True
+ACC-1501,Bluefield Hospitals,Healthcare,Public Sector,EMEA,United Kingdom,9834,2019-04-14,Direct,True
+ACC-1502,Banyan Schools,Education,Public Sector,APJC,India,18478,2023-12-05,Partner,True
+ACC-1503,Summit Bank,Financial Services,Mid-Market,APJC,Australia,2063,2021-06-08,Direct,True
+ACC-1504,Orchid Medical Group,Healthcare,Mid-Market,EMEA,UAE,1115,2020-05-11,Partner,False
+ACC-1505,Sahyadri Insurance,Financial Services,Mid-Market,EMEA,United Kingdom,2119,2017-03-27,Partner,True
+ACC-1506,Kestrel Transit Authority,Government,Public Sector,APJC,Australia,2552,2017-12-15,Direct,True
+ACC-1507,Cedarline Clinics,Healthcare,SMB,Americas,United States,20,2015-09-13,Partner,True
+ACC-1508,Lakeshore Software,Technology,Mid-Market,APJC,India,288,2019-12-20,Direct,False
+ACC-1509,Westbrook College,Education,Public Sector,EMEA,South Africa,767,2017-03-23,Partner,True
+ACC-1510,Northgate Outfitters,Retail,SMB,Americas,United States,25,2017-05-12,Partner,True
+ACC-1511,Oakridge Energy,Energy & Utilities,Enterprise,Americas,United States,7644,2014-06-16,Direct,True
+ACC-1512,Tidewater Energy,Energy & Utilities,Mid-Market,APJC,Japan,1256,2023-03-09,Partner,False
+ACC-1513,Nimbus Municipal Council,Government,Public Sector,Americas,United States,11021,2024-10-18,Direct,True
+ACC-1514,Orchid Transit Authority,Government,Public Sector,Americas,Mexico,5031,2019-09-23,Direct,True
+ACC-1515,Unity Health,Healthcare,SMB,Americas,Mexico,28,2020-02-29,Partner,True
+ACC-1516,Lotus Stores,Retail,Enterprise,Americas,United States,26927,2024-08-22,Direct,True
+ACC-1517,Westbrook Supermarkets,Retail,SMB,Americas,United States,49,2019-11-18,Partner,False
+ACC-1518,Falcon Motors,Manufacturing,Mid-Market,EMEA,UAE,257,2021-02-27,Partner,False
+ACC-1519,Thames Digital,Technology,Enterprise,Americas,United States,6098,2018-12-03,Partner,True
+ACC-1520,Redstone Capital,Financial Services,Enterprise,APJC,Singapore,7148,2019-11-30,Direct,True
+ACC-1521,Tidewater Hospitals,Healthcare,SMB,APJC,Australia,39,2019-12-31,Partner,True
+ACC-1522,Falcon Software,Technology,SMB,Americas,United States,155,2022-03-05,Partner,False
+ACC-1523,Kaveri Institute,Education,Enterprise,Americas,Brazil,27976,2020-12-11,Direct,False
+ACC-1524,Brightpath Hospitals,Healthcare,Mid-Market,EMEA,United Kingdom,1240,2019-10-17,Direct,False
+ACC-1525,Alpine Renewables,Energy & Utilities,Mid-Market,Americas,United States,344,2014-11-15,Partner,False
+ACC-1526,Evergreen Clinics,Healthcare,SMB,Americas,United States,153,2024-05-25,Partner,True
+ACC-1527,Tidewater Mart,Retail,SMB,APJC,Japan,110,2024-03-17,Partner,False
+ACC-1528,Vantage Insurance,Financial Services,Enterprise,APJC,Australia,4643,2016-02-14,Direct,True
+ACC-1529,Silverline Securities,Financial Services,SMB,APJC,Australia,102,2017-05-16,Partner,False
+ACC-1530,Meridian Retail,Retail,Mid-Market,Americas,Mexico,761,2025-03-10,Partner,False
+ACC-1531,Granite University,Education,Public Sector,EMEA,South Africa,2788,2017-09-09,Partner,True
+ACC-1532,Monsoon Software,Technology,SMB,EMEA,Germany,26,2023-05-03,Partner,True
+ACC-1533,Unity Diagnostics,Healthcare,Enterprise,Americas,United States,12981,2023-01-12,Direct,True
+ACC-1534,Falcon Renewables,Energy & Utilities,SMB,EMEA,France,25,2023-11-23,Partner,True
+ACC-1535,Unity Institute,Education,Enterprise,Americas,Mexico,4213,2014-03-09,Direct,True
+ACC-1536,Rhine Motors,Manufacturing,Enterprise,Americas,United States,3809,2019-07-21,Direct,True
+ACC-1537,Falcon Clinics,Healthcare,Public Sector,EMEA,Germany,20891,2020-07-02,Partner,False
+ACC-1538,Nimbus College,Education,SMB,Americas,United States,41,2023-08-16,Partner,False
+ACC-1539,Westbrook Hospitals,Healthcare,Mid-Market,Americas,United States,566,2016-07-31,Direct,False
+ACC-1540,Bluefield Outfitters,Retail,Enterprise,APJC,Australia,6957,2017-07-11,Partner,False
+ACC-1541,Evergreen Diagnostics,Healthcare,SMB,APJC,India,193,2016-01-26,Partner,False
+ACC-1542,Summit Institute,Education,SMB,EMEA,UAE,82,2022-10-04,Partner,False
+ACC-1543,Saffron Retail,Retail,SMB,APJC,Australia,203,2025-06-25,Partner,False
+ACC-1544,Unity Public Works,Government,Public Sector,APJC,Australia,1616,2015-08-13,Partner,True
+ACC-1545,Rhine Securities,Financial Services,Enterprise,Americas,United States,3601,2016-09-05,Direct,True
+ACC-1546,Banyan Medical Group,Healthcare,Mid-Market,Americas,United States,899,2017-07-13,Partner,False
+ACC-1547,Thames Retail,Retail,Enterprise,Americas,Canada,7496,2024-03-21,Direct,False
+ACC-1548,Evergreen Outfitters,Retail,Mid-Market,Americas,Canada,1584,2019-02-15,Direct,True
+ACC-1549,Sahyadri Health,Healthcare,Mid-Market,APJC,Japan,1893,2017-03-29,Direct,False
+ACC-1550,Rhine University,Education,Mid-Market,Americas,Brazil,742,2017-09-15,Direct,True
+ACC-1551,Banyan Securities,Financial Services,Mid-Market,EMEA,United Kingdom,2340,2020-11-15,Direct,True
+ACC-1552,Zenith Supermarkets,Retail,SMB,Americas,Brazil,80,2018-06-13,Direct,True
+ACC-1553,Banyan Revenue Dept,Government,Public Sector,Americas,United States,1442,2015-08-13,Partner,True
+ACC-1554,Lakeshore Retail,Retail,Enterprise,APJC,India,11825,2023-06-05,Partner,True
+ACC-1555,Ironwood Software,Technology,SMB,Americas,United States,21,2018-11-08,Partner,True
+ACC-1556,Sahyadri Digital,Technology,Mid-Market,Americas,United States,1591,2016-12-13,Partner,False
+ACC-1557,Harborview College,Education,SMB,Americas,United States,25,2022-05-16,Partner,False
+ACC-1558,Alpine College,Education,Public Sector,EMEA,United Kingdom,1673,2022-07-26,Partner,True
+ACC-1559,Nimbus Hospitals,Healthcare,Public Sector,EMEA,Germany,4564,2015-10-13,Partner,True
+ACC-1560,Lotus Public Works,Government,Public Sector,EMEA,UAE,591,2014-11-06,Partner,True
+ACC-1561,Lakeshore Schools,Education,SMB,Americas,United States,24,2014-07-10,Partner,True
+ACC-1562,Harborview Cloud,Technology,SMB,Americas,United States,116,2022-10-20,Partner,False
+ACC-1563,Nimbus Academy,Education,SMB,APJC,Australia,23,2021-03-11,Partner,False
+ACC-1564,Quarry Digital,Technology,SMB,EMEA,United Kingdom,66,2023-02-07,Partner,False
+ACC-1565,Harborview Capital,Financial Services,SMB,EMEA,United Kingdom,47,2021-03-14,Partner,False
+ACC-1566,Apex Insurance,Financial Services,SMB,EMEA,UAE,35,2018-08-14,Partner,False
+ACC-1567,Apex Public Works,Government,Public Sector,APJC,Australia,1046,2020-10-10,Direct,True
+ACC-1568,Sahyadri Institute,Education,SMB,Americas,United States,137,2022-04-21,Partner,False
+ACC-1569,Meridian University,Education,SMB,Americas,Canada,221,2018-08-02,Partner,False
+ACC-1570,Lotus Insurance,Financial Services,Enterprise,EMEA,United Kingdom,3903,2024-07-08,Partner,True
+ACC-1571,Orchid Labs,Technology,Mid-Market,Americas,United States,2278,2024-05-04,Direct,False
+ACC-1572,Zenith Cloud,Technology,Enterprise,APJC,Australia,16551,2023-03-16,Direct,True
+ACC-1573,Banyan Clinics,Healthcare,Mid-Market,EMEA,United Kingdom,1095,2025-05-28,Partner,True
+ACC-1574,Bluefield Revenue Dept,Government,Public Sector,APJC,Australia,8037,2018-06-28,Direct,False
+ACC-1575,Lotus Labs,Technology,Mid-Market,APJC,Japan,1264,2015-04-25,Partner,False
+ACC-1576,Nimbus University,Education,Mid-Market,EMEA,UAE,1651,2019-07-26,Partner,False
+ACC-1577,Pinnacle Securities,Financial Services,Enterprise,APJC,Japan,11620,2022-07-29,Partner,False
+ACC-1578,Kestrel Securities,Financial Services,Mid-Market,EMEA,Germany,853,2022-12-16,Partner,False
+ACC-1579,Rhine Retail,Retail,SMB,APJC,India,45,2018-06-20,Partner,False
+ACC-1580,Brightpath Supermarkets,Retail,Mid-Market,Americas,United States,318,2017-05-13,Direct,False
+ACC-1581,Nimbus Bank,Financial Services,SMB,EMEA,UAE,107,2019-02-14,Partner,False
+ACC-1582,Bluefield Renewables,Energy & Utilities,Enterprise,EMEA,United Kingdom,2781,2023-03-29,Direct,True
+ACC-1583,Lakeshore Health,Healthcare,SMB,Americas,United States,40,2014-09-12,Partner,False
+ACC-1584,Thames Health,Healthcare,SMB,Americas,United States,25,2017-10-09,Direct,False
+ACC-1585,Kaveri Components,Manufacturing,SMB,APJC,India,32,2016-08-23,Partner,True
+ACC-1586,Banyan Energy,Energy & Utilities,Enterprise,EMEA,UAE,19033,2023-04-07,Direct,True
+ACC-1587,Apex Bank,Financial Services,SMB,Americas,United States,97,2019-05-26,Partner,True
+ACC-1588,Northgate Power,Energy & Utilities,Enterprise,Americas,Mexico,9529,2014-12-31,Partner,True
+ACC-1589,Oakridge Supermarkets,Retail,Enterprise,Americas,United States,3329,2017-01-03,Partner,True
+ACC-1590,Alpine Grid,Energy & Utilities,SMB,Americas,United States,59,2014-07-06,Partner,False
+ACC-1591,Falcon Finance,Financial Services,Enterprise,APJC,Japan,7670,2019-06-20,Direct,True
+ACC-1592,Alpine Bank,Financial Services,SMB,Americas,United States,123,2025-06-20,Partner,False
+ACC-1593,Summit Systems,Technology,SMB,Americas,Brazil,86,2020-07-09,Direct,True
+ACC-1594,Unity Cloud,Technology,Enterprise,EMEA,South Africa,11923,2023-12-29,Partner,True
+ACC-1595,Kestrel Schools,Education,Public Sector,Americas,Brazil,3359,2022-07-15,Direct,True
+ACC-1596,Monsoon Steelworks,Manufacturing,SMB,Americas,United States,229,2024-02-24,Partner,True
+ACC-1597,Falcon Power,Energy & Utilities,Mid-Market,EMEA,United Kingdom,1426,2017-07-29,Direct,True
+ACC-1598,Orchid Clinics,Healthcare,SMB,EMEA,France,70,2024-12-07,Direct,False
+ACC-1599,Rhine Grid,Energy & Utilities,Mid-Market,APJC,India,753,2016-09-28,Direct,True
+ACC-1600,Quarry Utilities,Energy & Utilities,Mid-Market,EMEA,France,265,2019-01-15,Direct,False

@@ -1,0 +1,51 @@
+Great Efforts ... We have successfully built a model that profiles, audits, data engineering for quality, feature engineering, feature selection, training, testing and prediction pipelines with appropriate metadata.
+
+Now, my requirement to expose this model prediction as a REST API.
+
+Step 8: Fast API Service
+
+create src\northwind_loans\api\schemas.py and 
+	src\northwind_loans\api\main.py
+
+Schemas (Pydantic v2):
+- ApplicantIn:
+  required: annual_income (float, > 0, <= 20,000,000), monthly_existing_emi (float, >= 0),
+            employment_type (Literal["Salaried","Self-Employed","Business Owner"]),
+            loan_purpose (Literal["Home","Personal","Auto","Education","Business"]),
+            requested_tenure_months (int, 6..360)
+  optional: application_id (str), credit_score (int, 300..900; None allowed for thin-file applicants),
+            years_employed (float, 0..50), existing_loans_count (int, 0..20), requested_amount (float, > 0),
+            has_collateral (bool),
+            gender (Literal["Male","Female","Other"]) and age (int, 18..75): document in the field
+            description that these are used ONLY for fairness monitoring, never by the model.
+  Add an OpenAPI example built from sample row NWF-035344.
+- OfferOut: application_id, offered_amount, raw_model_estimate, manual_review, review_reasons,
+  rules_applied, model_version.
+- BatchIn: {"applicants": list[ApplicantIn]} with 1..1000 items; BatchOut: {"results": list[OfferOut]}.
+
+
+App:
+
+- at module import, read ONLY the latest metadata JSON to set the app title, version
+- FastAPI needs version as a string, so we use str(metadata ...)
+- Load the pickle in a lifespan handler that creates ONLY ONE instance of LoanOfferPredictor at the startup and
+	scores if one app.state
+- i want the following endpoints
+	- POST /predict -> OfferOut
+	- POST /predict/batch -> BatchOut
+	- GET /health
+	- GET /ready
+	- GET /model-info
+- validation constraints live in the Pydantic schemas, so bad inputs return Bad Input HTTP Error, not 500 error.
+
+Acceptance checks
+	- /health and /ready endpoints return 200
+	- predict with the OpenAPI example returns 200 and an offer
+	- predict with credit score 950 and returns 422 with a clear message
+	- predict with loan purpose Holiday returns 422 http validation errors
+	- predict batch with the sample rows
+
+The start the server using UVICORN at the port number 8000 (make sure that this port and host are configurable in .env) - call with curl for health and tell me the swagger URL
+
+	- stop the server afterwards and confirm me that the port 8000 is FREE
+

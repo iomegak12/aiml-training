@@ -1,0 +1,18 @@
+<pasted_content id="6505">
+Having the understanding of LangChain DeepAgents and IT Support Ticket Management Library, I want to develop a notebook which provides the following capabilities.
+
+- Use OpenAI, and I shall update .env file with OPENAI_API_KEY
+- Use GPT 5.1 Model for Reasoning & High Thinking Efforts
+- Develop Tools that provide all functionalities of IT Support Ticket Management Library
+- But, do NOT modify the library, and instead create tools in src\agent-tools
+- Model Name, Thinking Effort all should be configurable in .env
+- Add additional tools such as get weather, get location, get current time (you can use dummy values for demonstration purposes)
+- Define an agent with all tools attached
+- Demonstrate commonly used Use Cases for Testing the Agent (including IT and Local Tools)
+- Streaming Support
+- Also add another demonstration that shows the plan before you execute the plan, for a given question being asked.
+- Do Everything in the notebook
+- Make the notebook more modular, rather implementing everything in the notebook itself.
+</pasted_content id="6505">
+
+Do you understand my requirements? Let's have a debate of MCQs based QAs so we both are aligned in our goals.

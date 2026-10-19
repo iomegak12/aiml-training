@@ -1,0 +1,68 @@
+Step 1: Create the Project Scaffold
+
+1. I prefer the following structure (create empty __init__.py files where needed, keep existing data files)
+- source codes in src\northwind_loans
+- api in src\northwind_loans\api
+- data\processed
+- models
+- logs
+- reports
+- scripts
+- tests
+- monitoring\prometheus
+- monitoring\grafana\
+- monitoring\grafana\provisioning (dashboards, datasources)
+- add .gitkeep to empty folders
+
+2. i prefer the following dependencies as I have tested in my other ML projects
+
+   
+
+<pasted_content id="fa34">
+pandas==2.2.3
+   numpy==2.1.3
+   pyarrow==18.1.0
+   scikit-learn==1.5.2
+   scipy==1.14.1
+   fastapi==0.115.6
+   uvicorn[standard]==0.32.1
+   pydantic==2.10.4
+   prometheus-client==0.21.1
+   python-json-logger==3.2.1
+   requests==2.32.3
+   pytest==8.3.4
+   httpx==0.28.1
+</pasted_content id="fa34">
+
+3. i prefer UV based python environment (setup tools, src layout, package name - northwind-loans, import name northwind-loans, requires-python >= 3.11 and <= 3.12 so the package can be installed with pip install -e
+
+4. config.py containing all my configuration settings (wherever applicable refer .env to provide configuration settings and load them) - .env (should not be version controlled), .env.example
+- PROJECT_ROOT and paths - RAW_DATA, SAMPLE_DATA, PROCESSED_DATA, REPORTS_DIR, MODEL_DIR, LOG_DIR
+- TARGET = max_loan_offered
+- I have credit policy rules as per my organization requirements
+   
+
+<pasted_content id="fa34">
+- CREDIT_POLICY, a dict with this Northwind credit policy (provided by the credit team):
+       rate_card_pct          = {"Home": 8.6, "Personal": 12.5, "Auto": 9.2, "Education": 10.0, "Business": 13.5}
+       income_multiple_cap    = {"Home": 5.0, "Personal": 1.5, "Auto": 1.2, "Education": 1.5, "Business": 2.0}
+       foir_by_credit_band    = {"<600": 0.40, "600-649": 0.40, "650-699": 0.45, "700-749": 0.50, "750+": 0.55}
+       salaried_foir_bonus    = 0.05
+       credit_haircut         = {"<600": 0.5, "600-649": 0.8}   (all other bands: 1.0)
+       absolute_cap_income_multiple = 5
+       round_offer_to         = 1000
+       manual_review_rules    = {"credit_score_below": 600, "dti_above": 0.6, "credit_score_missing": True}
+     (FOIR = Fixed Obligations to Income Ratio: the share of monthly income allowed for all EMIs.)
+   - VALID_RANGES = {"age": (18, 75), "credit_score": (300, 900), "requested_tenure_months": (6, 360),
+                     "dependents": (0, 10)}, and INCOME_PAISE_THRESHOLD = 20_000_000 (2 crore).
+</pasted_content id="fa34">
+
+5. A makefile with these targets (implement the commands later steps need - use the .venv paths and python) - setup, profile, clean-data, train, predict-sample, test, serve, docker-build, up, down, loads, simulate-normal, simulate-drift, simulate-bad and monitor
+6. .gitignore
+7. README.md, changelog, troubleshooting, contributing, security, code of conduct
+8. MIT license
+9. create a virtual environment .venv with python 3.12 uv and install all dependency packages
+10. my acceptance checks would be 
+- from northwind_loans import all configuration settings and show the output
+
+Do you get my requirements? Let's have a debate MCQs based QAs so we both are aligned in what we wanted to do.

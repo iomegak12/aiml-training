@@ -1,0 +1,15 @@
+.page {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 22px;
+  height: calc(100vh - var(--header-height) - 110px);
+  min-height: 620px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-rows: 240px minmax(560px, 1fr);
+    height: auto;
+  }
+}

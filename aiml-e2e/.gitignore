@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environment
+.venv/
+
+# Secrets / local settings
+.env
+
+# Test & tool caches
+.pytest_cache/
+.pytest_tmp/
+.coverage
+htmlcov/
+
+# Generated artefacts (keep the folders via .gitkeep)
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+logs/*
+!logs/.gitkeep
+reports/*
+!reports/.gitkeep
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

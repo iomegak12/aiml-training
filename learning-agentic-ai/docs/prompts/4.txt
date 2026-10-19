@@ -1,0 +1,29 @@
+<pasted_content id="6505">
+Now, i would like to expose the agent as REST API with the following capabilities.
+
+- FastAPI based REST API
+- /chat and /chat-streaming endpoints
+- /health endpoint
+- /ready endpoint
+- uvicorn hosting hosting
+- when you start the server, display colorful information in the console with all important information
+- log the request in JSON format (minimal details in console, file based logging)
+- open api documentation
+- swagger support
+- .gitignore
+- readme.md
+- mit license
+- contributing, troubleshooting, changelog and security - code of conduct also
+- docker file
+- multistage build - slimmed version
+- docker compose with volume based logging
+- structured error handling
+- keep the source code in api
+- main.py at the root folder to start the server
+- add makefile 
+- add start, stop makefile targets
+- rate limiting (100 requests/minute - ip address based - reset in 30 seconds warmup period)
+- documentation comments to API endpoints
+
+do you understand my requirement changes? ask me questions so we both are aligned (MCQs based QAs)
+</pasted_content id="6505">

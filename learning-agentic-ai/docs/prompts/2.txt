@@ -1,0 +1,40 @@
+<pasted_content id="6505">
+I want to create a custom python library in the current workspace which keeps track of all IT supported ticketing.
+
+A IT support ticket includes the following details
+
+. Ticket ID
+. Ticket Date
+. Raised By
+. Title
+. Description
+. Priority
+. Department
+. Current Status
+. Resolved By
+. Remarks
+
+I want you to following the given rules to develop the library.
+
+- use SQLite database to maintain all support tickets 
+- configurable through .env file (database path)
+- a library which provides functionalities such as
+	- register ticket
+	- find tickets by title, description, priority, department, remarks
+		(partial, case insensitive match)
+	- get ticket details
+	- update ticket
+	- resolve ticket
+- use ORM (sqlalchemy) to interact with the database, instead of Raw SQL
+- Pydantic v2 schema validations before you register, update and resolve tickets
+- All resolved tickets are archived by changing the status
+- Filtering tickets should ONLY return NON ARCHIVED tickets
+
+Do you understand my requirements? ask me questions if you have any doubts in MCQs based QAs.
+
+NOTE: 
+
+1. Do NOT assume anything on your own, clarify with me
+2. Do NOT introduce any other features apart from what we both agreed upon
+3. I prefer uv based python environment and project management
+</pasted_content id="6505">

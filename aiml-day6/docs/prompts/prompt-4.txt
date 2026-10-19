@@ -1,0 +1,46 @@
+as part of the plan, i would like to extend the MCP server development for CRM Profile Management and Tickets Management - both are in the same MCP server ... importantly, update the plan to use those MCP servers in the agent.
+
+As per the business requirement, a customer profile has the following details
+- customer profile id
+- full name
+- communication address
+- email
+- phone number
+- credit limit
+- active status
+- remarks
+
+and a suport ticket shall be having
+- ticket id
+- ticket title
+- ticket description
+- raised by (customer profile id)
+- ticket status
+- priority
+- resolved by
+- resolution date
+- resolution remarks
+
+By default, i would like to have the following tools
+- fetch customer profile by profile id
+- search customer profiles by commonly used attributes (case insensitive | partial)
+- no support for CRUD operations
+- get support tickets by customer profile id
+- register a ticket
+- search tickets by commonly used attributes (case insensitive and partial)
+- resolve ticket
+
+apart from the above, i would like to add MCP resources and prompts ...
+
+1. keep the MCP server implemented src\mcp
+2. by default i would like to use sqlite3 database to keep the data (configurable through .env)
+3. i don't see security features for authenticating MCP servers
+4. should be started independently (make mcp-server-up, mcp-server-down)
+5. docker ignore (at the root)
+6. docker compose (at the root)
+7. docker file for mcp server packaging (at the root)
+8. multi stage build - no health check inside the container - slimmed version of the container image
+9. use fast mcp (https://gofastmcp.com/getting-started/welcome)
+10. when you start mcp server, the console should display important information colorful
+
+do you understand my change requirements? let's hava a debate on these MCQs based QAs.

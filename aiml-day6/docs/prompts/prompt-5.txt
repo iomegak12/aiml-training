@@ -1,0 +1,6 @@
+I would like to bring the following changes to the plan
+
+- instead of creating a single / unified / bloated agent which does everything, i want to create specialized agents (customer support agent, ticket management agent, product manuals support agent, hr policy support agent, coorindator agent, which coordinates all of them)
+- i would like to use LangGraph to design how multiple agents work together for a given business user question with high thinking and planning
+
+do you understand my further changes? let's have a debate on MCQs based QAs so we both are aligned in our understandings.

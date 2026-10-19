@@ -1,0 +1,14 @@
+Can you refer the following URL https://docs.langchain.com/oss/python/deepagents/retrieval and analyze  how size based chunking, PDF loading, metadata generation, generate embeddings using Open AI Embedding model (refer .env for the model names OPENAI_EMBEDDING_MODEL) and store those embeddings into two different vector databases.
+
+a. a chroma database for HR policies and compliance documents
+b. another chroma database for product manuals and guides
+
+Common PDF document specific can be generated, and apart from that, what are all additional document metadata do you recommend?
+
+- make the code modularized - reusable and easy to understand
+- add doc string comments to every functionalities introduced
+- chunk size should be configure in .env
+- generate a validation script in scripts folder to show summary information what's available in vector databases, how many records, sample record and so on
+- add .env based batch size to read how many documents can be processed parallelly
+
+do you understand all my requirements? let's have a MCQs based QAs so we both are aligned in what we would like to accomplish now in Pre-RAG activities.

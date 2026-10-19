@@ -1,0 +1,43 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	start_turn(start_turn)
+	load_memory(load_memory)
+	plan(plan)
+	clarify(clarify)
+	run_step(run_step)
+	reflect(reflect)
+	approve_actions(approve_actions)
+	execute_actions(execute_actions)
+	synthesize(synthesize)
+	judge(judge)
+	finalize(finalize)
+	save_memory(save_memory)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> start_turn;
+	approve_actions --> execute_actions;
+	clarify --> plan;
+	execute_actions --> synthesize;
+	finalize --> save_memory;
+	judge -.-> finalize;
+	judge -.-> plan;
+	load_memory --> plan;
+	plan -.-> approve_actions;
+	plan -.-> clarify;
+	plan -.-> run_step;
+	plan -.-> synthesize;
+	reflect -.-> approve_actions;
+	reflect -.-> plan;
+	reflect -.-> run_step;
+	reflect -.-> synthesize;
+	run_step --> reflect;
+	start_turn --> load_memory;
+	synthesize --> judge;
+	save_memory --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

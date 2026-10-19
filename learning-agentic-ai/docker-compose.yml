@@ -1,0 +1,44 @@
+name: it-support-agent
+
+services:
+  api:
+    build:
+      context: .
+      target: runtime
+    image: it-support-agent-api:0.2.0
+    container_name: it-support-agent-api
+    # OPENAI_API_KEY, OPENAI_MODEL, OPENAI_REASONING_EFFORT, LOG_LEVEL come from .env
+    env_file: .env
+    # Container-internal settings (override the host-oriented values in .env)
+    environment:
+      API_HOST: 0.0.0.0
+      API_PORT: "8000"
+      LOG_DIR: /app/logs
+      TICKETS_DB_PATH: /app/data/tickets.db
+      # Served behind nginx at http://localhost/api
+      API_ROOT_PATH: /api
+      PUBLIC_BASE_URL: http://localhost/api
+      # Trust X-Forwarded-For from nginx so rate limits and logs use the real client IP.
+      # Safe because the API is not published: only containers on this network reach it.
+      FORWARDED_ALLOW_IPS: "*"
+    # No published ports: the API is reachable only through the web (nginx) service.
+    expose:
+      - "8000"
+    volumes:
+      - ./data:/app/data   # SQLite ticket database
+      - ./logs:/app/logs   # JSON request logs (api.log, rotated 10 MB x 5)
+    tty: true              # keeps the startup banner colourful in `docker compose logs`
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./web
+      target: runtime
+    image: it-support-agent-web:0.2.0
+    container_name: it-support-agent-web
+    ports:
+      - "80:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped

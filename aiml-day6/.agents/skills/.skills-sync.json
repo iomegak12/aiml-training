@@ -1,0 +1,12 @@
+{
+  "source": "src/skills",
+  "skills": [
+    "coordination",
+    "customer-support",
+    "hr-policies",
+    "product-support",
+    "rag-answering",
+    "ticket-management",
+    "web-research"
+  ]
+}

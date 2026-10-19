@@ -1,0 +1,43 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 16px 24px;
+  animation: rise 400ms ease-out;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.tile {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #f6e3f6;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fff 0%, var(--color-primary-tint) 100%);
+  box-shadow: var(--shadow-card);
+}
+
+.title {
+  margin-top: 22px;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-weight: 600;
+}
+
+.brand {
+  color: var(--color-primary);
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 1.45rem;
+  font-weight: 300;
+  color: var(--color-text-soft);
+}

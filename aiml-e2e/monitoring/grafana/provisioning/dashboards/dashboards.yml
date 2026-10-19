@@ -1,0 +1,13 @@
+# Grafana dashboard provisioning: load every JSON file from /etc/grafana/dashboards
+# (bind-mounted from monitoring/grafana/dashboards in docker-compose.yml).
+apiVersion: 1
+
+providers:
+  - name: northwind
+    folder: Northwind
+    type: file
+    disableDeletion: true
+    allowUiUpdates: false
+    updateIntervalSeconds: 10
+    options:
+      path: /etc/grafana/dashboards

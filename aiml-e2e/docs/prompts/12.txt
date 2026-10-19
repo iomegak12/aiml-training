@@ -1,0 +1,55 @@
+Now, it's time for designing Grafana Observability Dashboards based on metrics available - standard and custom busines metrics
+
+Can you look into this my requirement carefully, and understand them thoroughly
+Step 13: create monitoring/grafana/dashboards/loan_api.json (Grafana 11 dashboard JSON, uid "loan-api",
+title "Northwind Loan Offer API", refresh 5s, default time range last 15 minutes, datasource uid
+"prometheus") with three rows of panels:
+
+Row "Service health":
+1. Requests per second by endpoint:   sum by (endpoint) (rate(loan_api_requests_total[1m]))
+2. Error rate %: two series, 4xx and 5xx:
+   100 * sum(rate(loan_api_requests_total{status_code=~"4.."}[1m])) / sum(rate(loan_api_requests_total[1m]))
+   (and the same for "5..")
+3. Latency p50 and p95 for /predict:
+   histogram_quantile(0.95, sum by (le) (rate(loan_api_request_duration_seconds_bucket{endpoint="/predict"}[1m])))
+4. In-flight requests (stat): loan_api_requests_in_progress
+5. Validation errors by field (bar chart): sum by (field) (increase(loan_api_validation_errors_total[5m]))
+
+Row "Model behaviour":
+6. Predictions per second by loan purpose: sum by (loan_purpose) (rate(loan_model_predictions_total[1m]))
+7. Average offer (live) vs training reference:
+   sum(rate(loan_model_offer_amount_inr_sum[1m])) / sum(rate(loan_model_offer_amount_inr_count[1m]))
+   and, as a second query drawn as a dashed line, max(loan_model_reference_mean{feature="predicted_offer"})
+8. Manual review share %:
+   100 * (sum(rate(loan_model_predictions_total{manual_review="True"}[2m])) or vector(0))
+       / sum(rate(loan_model_predictions_total[2m]))
+   (use the label value exactly as the API writes it; check /metrics)
+9. Median offer-to-income ratio: histogram_quantile(0.5, sum by (le) (rate(loan_model_offer_to_income_ratio_bucket[2m])))
+
+Row "Data drift":
+10. Average annual income live vs reference (as in panel 7, using loan_model_input_annual_income_inr and
+    feature="annual_income")
+11. Average credit score live vs reference (loan_model_input_credit_score, feature="credit_score")
+12. Credit score distribution (bar gauge): sum by (le) (increase(loan_model_input_credit_score_bucket[5m]))
+    with the query format set to "Heatmap" so Grafana converts cumulative buckets into per-bucket counts
+13. Model version (stat): loan_model_info with legend {{model_version}}
+
+Fill monitoring/prometheus/alerts.yml, group "loan-api":
+- LoanApiDown: up{job="loan-api"} == 0 for 1m, severity critical
+- HighServerErrorRate: 5xx share > 5% for 2m, severity critical
+- HighLatencyP95: p95 /predict latency > 0.5s for 2m, severity warning
+- IncomeDrift, severity warning, for 1m:
+    abs( (sum(rate(loan_model_input_annual_income_inr_sum[1m])) / sum(rate(loan_model_input_annual_income_inr_count[1m])))
+         / scalar(max(loan_model_reference_mean{feature="annual_income"})) - 1 ) > 0.25
+  (scalar() is required: the two sides have different labels and would otherwise never match)
+- HighManualReviewShare: > 30% for 2m, severity warning (use the panel 8 expression with `or vector(0)`)
+Each alert has summary and description annotations.
+
+Then reload: docker compose restart grafana ; curl -X POST localhost:9090/-/reload
+
+Acceptance checks (run and show):
+- curl -s -u admin:northwind 'localhost:3000/api/search?query=Northwind' (dashboard found)
+- curl -s localhost:9090/api/v1/rules | python -m json.tool | grep '"name"' (5 alerts listed)
+- send 60 /predict requests (a quick loop), wait 15 s, then run EVERY panel and alert expression against
+  localhost:9090/api/v1/query and show that each returns at least one value (no errors, no empty results)
+Do you get my requirements? Let's have a healthy debate in MCQs based QAs so we both are aligned in what we want to design.

@@ -1,0 +1,20 @@
+Hi, My name is Ramkumar. I shall be demonstrating variety of RAG capabilities to my students.
+
+I want you to generate a script that generates 
+
+a. product manuals for commonly electronic items (TVs and Mobile Phones)
+b. HR policy and compliance documents (Leave Policy, Claims Policy and other common policies)
+
+- have 10+ documents in each category (10+ prodcut manuals with 5-10 pages, 10+ HR policy documents - each can have 3-4 pages)
+- Mostly it should be in PDFs
+- I don't need any images, diagrams or any other Non-Textual contents in those documents
+- python 3.12 + uv based virtual environment
+
+1. remove main.py from the root
+2. add corpus_data_generator.py in scripts folder, which generates everything
+3. following files needed (readme, .gitignore, makefile, troubleshooting, code of conduct, mit license, changelog, security - .gitkeep files in scripts and data folder)
+
+1. keep all source codes related to helper packages in src\data_generation folder
+2. scripts\corpus_data_generator.py should only use those helper packages and coorindate the generation process (modularize the code)
+
+Do you understand my requirements? Let's have a MCQs based QAs so we both are aligned on what we would like to design.

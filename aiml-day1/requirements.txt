@@ -1,0 +1,10 @@
+# Day 1 - Python Foundations & Data Libraries
+# Google Colab already includes all of these. For a local setup:
+#   python -m venv .venv && source .venv/bin/activate   (Windows: .venv\Scripts\activate)
+#   pip install -r requirements.txt
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+seaborn>=0.13
+scipy>=1.11        # used by pandas for Spearman correlation
+jupyterlab>=4.0

@@ -1,0 +1,48 @@
+<pasted_content id="fa34">
+Now, we shall be focusing onto Feature Engineering
+
+Step 4: Feature Engineering. 
+
+Create src\northwind_loans\features.py with a Scikit-Learn transformer policy features (base estimator and mixin) - it must be STATELESS i.e. fit returns self, nothing is learnt from the data - accept pandas data frame return a pandas data frame with original columns plus the new ones, implement get feature names out and support set output to transform to pandas.
+
+use the following guides and configuration specific CREDIT_POLICY - New Columns to be introduced accordingly.
+
+- monthly_income        = annual_income / 12
+- dti                   = monthly_existing_emi / monthly_income              (debt-to-income)
+- credit_band           = "<600", "600-649", "650-699", "700-749", "750+" from credit_score
+- foir_limit            = foir_by_credit_band[credit_band] + salaried_foir_bonus if employment_type == "Salaried"
+- affordable_emi        = max(monthly_income * foir_limit - monthly_existing_emi, 0)
+- annuity_factor        = (1 - (1 + r) ** -n) / r, where r = rate_card_pct[loan_purpose] / 1200 and
+                          n = requested_tenure_months   (present value of 1 rupee of EMI per month)
+- emi_capacity_amount   = affordable_emi * annuity_factor
+- policy_cap            = income_multiple_cap[loan_purpose] * annual_income
+- affordable_amount     = min(emi_capacity_amount, policy_cap, absolute_cap_income_multiple * annual_income)
+- credit_haircut        = credit_haircut.get(credit_band, 1.0)
+- policy_amount         = affordable_amount * credit_haircut
+
+Also add to the features python file, the column lists the model will use (we shall be importing them in later steps)
+
+RAW_NUMERIC_INPUTS   = ["annual_income", "monthly_existing_emi", "credit_score", "requested_tenure_months",
+                        "years_employed"]
+RAW_CATEGORICAL_INPUTS = ["employment_type", "loan_purpose"]
+ENGINEERED_NUMERIC   = ["dti", "emi_capacity_amount", "policy_cap", "affordable_amount", "policy_amount"]
+MODEL_CATEGORICAL    = ["employment_type", "loan_purpose", "credit_band"]
+EXCLUDED_FEATURES    = a dict of column -> reason:
+   requested_amount: "anchoring and leakage risk: the offer must reflect capacity, not the ask"
+   gender, age, marital_status, dependents: "protected or proxy attributes: monitored for fairness, never used"
+   city, education: "possible proxies; excluded in v1"
+   application_id, application_date: "identifiers"
+
+
+I prefer to have acceptance tests like below mentioned
+
+- load the parquet file from data\processed - transform the first 5 rows and print
+- columns i would like to see "annual_income", "monthly_existing_emi", "credit_score", "requested_tenure_months",
+                        "years_employed", "policy_amount", "dti", "affordable_emi", "affordable_amount",
+- on rows where all inputs are present, print the correlation between policy amount and max loan offered
+- show that transform gives identitical output when called twice or more than (so i can verify it's stateless)
+
+
+do you understand my feature engineering requirements? let's have a healthy debate in MCQs based QAs so we both are aligned in what exactly we want to achieve.
+
+Let's go

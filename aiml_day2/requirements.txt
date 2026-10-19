@@ -1,0 +1,11 @@
+# Days 1-2 - Python, data libraries and first ML models
+# Google Colab already includes all of these. For a local setup:
+#   python -m venv .venv && source .venv/bin/activate   (Windows: .venv\Scripts\activate)
+#   pip install -r requirements.txt
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+seaborn>=0.13
+scipy>=1.11          # used by pandas for Spearman correlation
+scikit-learn>=1.4    # Day 2 onwards
+jupyterlab>=4.0

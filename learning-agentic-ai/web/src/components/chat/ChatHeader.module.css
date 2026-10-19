@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px 14px 28px;
+}
+
+.titles {
+  min-width: 0;
+  flex: 1;
+}
+
+.title {
+  font-size: 1.15rem;
+}
+
+.subtitle {
+  margin-top: 2px;
+  font-size: 0.88rem;
+  color: var(--color-muted);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.badge {
+  flex: none;
+}
+
+@media (max-width: 760px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .badge {
+    display: none;
+  }
+}

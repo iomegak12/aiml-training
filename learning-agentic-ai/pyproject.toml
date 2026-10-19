@@ -1,0 +1,35 @@
+[project]
+name = "learning-agentic-ai"
+version = "0.2.0"
+description = "IT support Deep Agent (LangChain Deep Agents + OpenAI) with a FastAPI REST API and an SQLite ticket library"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "deepagents>=0.7.26",
+    "fastapi>=0.143.2",
+    "langchain-openai>=1.7.2",
+    "pydantic>=2.14.1",
+    "python-dotenv>=1.2.4",
+    "rich>=15.0.0",
+    "sqlalchemy>=2.1.4",
+    "tzdata>=2026.5",
+    "uvicorn>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "ipykernel>=7.4.0",
+    "pytest>=9.1.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.16,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = ["it_tickets", "agent_tools", "ticket_agent", "api"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]

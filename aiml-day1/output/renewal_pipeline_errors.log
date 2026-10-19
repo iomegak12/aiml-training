@@ -1,0 +1,5 @@
+Line 16 : could not convert string to float: 'TBD'
+Line 23 : Expected 9 fields, got : 6
+Line 32 : Seats must be positive, got : -40
+Line 48 : Invalid isoformat string: '31/12/2026'
+Line 76 : could not convert string to float: '534362,64'
